@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1512, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testimonials</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <style>
         .font-lato {
@@ -34,10 +37,10 @@
         </div>
         <!-- Desktop Menu -->
         <ul class="hidden md:flex items-center space-x-2 sm:space-x-4 lg:space-x-8 font-semibold text-[10px] sm:text-sm md:text-base">
-            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
+            <li><a href="index.html" class="text-black ">HOME</a></li>
             <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
             <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
-            <li><a href="index.html" class="text-black">TESTIMONIALS</a></li>
+            <li><a href="testimonials.html" class="text-black border-b-2 border-black">TESTIMONIALS</a></li>
             <li><a href="gallery.html" class="text-black">GALLERY</a></li>
             <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
         </ul>
@@ -73,7 +76,69 @@
     </script>
 
 
-      
+        <section class="relative testimonial-bg inset-0 w-full h-full z-0 pointer-events-none py-16 px-4">
+   
+        <style>
+            .testimonial-bg {
+                background-image: url('image/OUR\ TESTIMONIALS.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        </style>
+        <!-- <div class="testimonial-bg absolute inset-0 w-full h-full z-0 pointer-events-none"></div> -->
+
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl lg:text-4xl font-bold italic mb-2">OUR TESTIMONIALS</h2>
+            <h3 class="text-2xl lg:text-3xl font-semibold mb-10">What Client Say About Dayal Fabricator</h3>
+            
+            <!-- Testimonial Card -->
+            <div class="flex max-w-4xl mx-auto justify-center mb-10">
+                <div class="bg-white rounded-2xl shadow-lg flex flex-col sm:flex-row items-center p-4 sm:p-8 w-full max-w-4xl" style="min-height: 220px;">
+                    <img src="image/teammember.jpg" alt="User" class="w-24 h-24 sm:w-48 sm:h-48 rounded-full object-cover mb-4 sm:mb-0 sm:mr-10" />
+                    <div class="flex-1 text-center sm:text-left flex flex-col justify-center px-2">
+                        <h4 class="font-lato font-bold text-[18px] sm:text-[32px] leading-[1.2] text-gray-800 mb-1 sm:mb-2">
+                            Hannah Schmitt
+                        </h4>
+                        <p class="font-lato font-normal text-[12px] sm:text-[16px] leading-[1.2] text-gray-700 mb-2 sm:mb-3 break-words">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse
+                        </p>
+                        <span class="font-lato text-[10px] sm:text-[14px] text-gray-500">May 8, 2020</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Dots & Arrows -->
+            <div class="flex justify-center items-center gap-4 mb-12">
+                <button class="text-[#054C73] text-2xl"><span class="material-icons">chevron_left</span></button>
+                <div class="flex gap-2">
+                    <span class="w-3 h-3 rounded-full bg-[#054C73]"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                    <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                </div>
+                <button class="text-[#054C73] text-2xl"><span class="material-icons">chevron_right</span></button>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 max-w-7xl gap-8 mt-8">
+                <div class="bg-[#42AEC1] rounded-2xl flex flex-col items-center justify-center py-10 px-4 text-white">
+                    <span class="material-icons text-5xl mb-2">email</span>
+                    <div class="text-xl font-semibold mb-1">Email Now !</div>
+                    <div class="text-lg">Dayalupvcwindow@Gmail.Com</div>
+                </div>
+                <div class="bg-[#42AEC1] rounded-2xl flex flex-col items-center justify-center py-10 px-4 text-white">
+                    <span class="material-icons text-5xl mb-2">call</span>
+                    <div class="text-xl font-semibold mb-1">Get Started Now!</div>
+                    <div class="text-lg">
+                        <a href="tel:+919814868271" class="underline">+91-9814868271</a>, 
+                        <a href="tel:+919814468271" class="underline">+9814468271</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
         
   <!-- Footer -->
   <footer class="w-full px-4 py-10 overflow-x-hidden"

@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>product2</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @media (min-width: 1024px) {
@@ -25,12 +28,12 @@
 <body class="bg-[#043357] min-h-screen overflow-x-hidden">
 
     <!-- Top Bar -->
-     <div class="bg-gray-900 text-white text-[9px] sm:text-xs md:text-sm flex flex-col md:flex-row md:items-center md:justify-between px-2 md:px-4 py-2 gap-1 sm:gap-0">
+   <div class="bg-gray-900 text-white text-[9px] sm:text-xs md:text-sm flex flex-col md:flex-row md:items-center md:justify-between px-2 md:px-4 py-2 gap-1 sm:gap-0">
         <div class="flex items-center space-x-2 mb-1 md:mb-0">
             <span class="text-orange-500">📞</span>
             <span class="text-[10px] sm:text-xs md:text-sm">+91-9814868271, +9814468271</span>
         
-       </div>
+        </div>
         <div class="flex items-center space-x-2 mb-1 md:mb-0">
             <span class="text-orange-500">✉️</span>
             <span class="text-[10px] sm:text-xs md:text-sm">Dayalupvcwindow@gmail.com</span>
@@ -47,9 +50,9 @@
         </div>
         <!-- Desktop Menu -->
         <ul class="hidden md:flex items-center space-x-2 sm:space-x-4 lg:space-x-8 font-semibold text-[10px] sm:text-sm md:text-base">
-            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
+            <li><a href="index.html" class="text-black k">HOME</a></li>
             <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
-            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+            <li><a href="productpage1.html" class="text-black border-b-2 border-black">POR PRODUCT</a></li>
             <li><a href="testimonials.html" class="text-black">TESTIMONIALS</a></li>
             <li><a href="gallery.html" class="text-black">GALLERY</a></li>
             <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
@@ -63,7 +66,18 @@
             </button>
         </div>
     </nav>
- <script>
+    <!-- Mobile Menu (hidden by default, shown on button click) -->
+    <div id="mobile-menu" class="md:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden">
+        <ul class="flex flex-col items-start px-6 py-4 gap-2 text-[11px] font-semibold rounded-l-xl shadow-xl w-64 absolute right-0 top-0 bg-white">
+            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
+            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+            <li><a href="index.html" class="text-black">TESTIMONIALS</a></li>
+            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
+            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+        </ul>
+    </div>
+     <script>
         // Simple mobile menu toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -73,6 +87,7 @@
             });
         }
     </script>
+    
     <!-- Main Content -->
     <div
         class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(100vh-200px)] pt-10 pb-16 relative bg-cover bg-center bg-no-repeat"
