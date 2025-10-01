@@ -27,63 +27,65 @@
 <body class="bg-[#043357] min-h-screen">
 
   <!-- Top Contact Bar -->
-  <div class="bg-gray-900 text-white text-[9px] sm:text-xs md:text-sm flex flex-col md:flex-row md:items-center md:justify-between px-2 md:px-4 py-2 gap-1 sm:gap-0">
-    <div class="flex items-center space-x-2 mb-1 md:mb-0">
-      <span class="text-orange-500">📞</span>
-      <span>+91-9814868271, +9814468271</span>
-    
-    <div class="flex items-center space-x-2 mb-1 md:mb-0">
-      <span class="text-orange-500">✉️</span>
-      <span>Dayalupvcwindow@gmail.com</span>
-    </div></div>
-    <div class="flex items-center">
-      <span class="material-icons text-orange-500 mr-1 hidden sm:inline-block">location_on</span>
-      <span>Tajpur road back side Barth box factory near Hp Gass Agency Ludhiana punjab</span>
-    </div>
-  </div>
+  <div class="bg-gray-900 text-white text-[9px] sm:text-xs lg:text-sm flex flex-col lg:flex-row lg:items-center lg:justify-between px-2 lg:px-4 py-2 gap-1 sm:gap-0">
+        <div class="flex items-center space-x-2 mb-1 lg:mb-0">
+            <span class="text-orange-500">📞</span>
+            <span class="text-[10px] sm:text-xs lg:text-sm">+91-9814868271, +9814468271</span>
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow flex justify-between items-center px-4 py-2">
-    <div class="flex items-center">
-      <img src="image/v667_1279.png" alt="GermanTech Logo" class="w-20 sm:w-36 md:w-60">
+            <div class="flex items-center space-x-2 mb-1 lg:mb-0">
+                <span class="text-orange-500">✉️</span>
+                <span class="text-[10px] sm:text-xs lg:text-sm">Dayalupvcwindow@gmail.com</span>
+            </div>
+        </div>
+        <div class="flex items-center">
+            <span class="material-icons text-orange-500 text-[13px] sm:text-base lg:text-lg mr-1 hidden sm:inline-block">location_on</span>
+            <span class="block lg:inline text-[10px] sm:text-xs lg:text-sm">Tajpur road back side Barth box factory near Hp Gass Agency Ludhiana punjab</span>
+        </div>
     </div>
-    <ul class="hidden md:flex items-center space-x-6 font-semibold text-sm">
-      <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
-      <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
-      <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
-      <li><a href="index.html" class="text-black">TESTIMONIALS</a></li>
-      <li><a href="gallery.html" class="text-black">GALLERY</a></li>
-      <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
-    </ul>
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden flex items-center">
-      <button id="mobile-menu-btn" class="flex flex-col space-y-1">
-        <span class="w-6 h-0.5 bg-black"></span>
-        <span class="w-6 h-0.5 bg-black"></span>
-        <span class="w-6 h-0.5 bg-black"></span>
-      </button>
+    <!-- Navbar -->
+    <nav class="bg-white shadow flex  justify-around">
+        <div class="flex items-center">
+            <img src="image/v667_1279.png" alt="GermanTech Logo" class="w-20 h-8 sm:w-36 sm:h-12 lg:w-60 lg:h-20">
+        </div>
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex items-center space-x-2 sm:space-x-4 lg:space-x-8 font-semibold text-[10px] sm:text-sm lg:text-base">
+            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
+            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+            <li><a href="testimonials.html" class="text-black">TESTIMONIALS</a></li>
+            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
+            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+        </ul>
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center">
+            <button id="mobile-menu-btn" class="flex flex-col space-y-1 focus:outline-none">
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+                <span class="w-6 h-0.5 bg-black"></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile Menu (hidden by default, shown on button click) -->
+    <div id="mobile-menu" class="lg:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden">
+        <ul class="flex flex-col items-start px-6 py-4 gap-2 text-[11px] font-semibold rounded-l-xl shadow-xl w-64 absolute right-0 top-0 bg-white">
+            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
+            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+            <li><a href="testimonials.html" class="text-black">TESTIMONIALS</a></li>
+            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
+            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+        </ul>
     </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden">
-    <ul class="flex flex-col items-start px-6 py-4 gap-2 font-semibold w-64 absolute right-0 top-0 bg-white">
-      <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
-      <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
-      <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
-      <li><a href="testimonials.html" class="text-black">TESTIMONIALS</a></li>
-      <li><a href="gallery.html" class="text-black">GALLERY</a></li>
-      <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
-    </ul>
-  </div>
-
-  <script>
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
+    <script>
+        // Simple mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (menuBtn && menu) {
+            menuBtn.addEventListener('click', function() {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
 
   <!-- Gallery Section -->
   <section class="py-10 pb-16 rounded-b-[40px] min-h-screen bg-cover bg-center" 
@@ -101,9 +103,9 @@
     <div class="max-w-7xl mx-auto flex flex-wrap gap-8 text-white">
         <!-- Logo & About -->
         <div class="flex flex-col items-start min-w-[220px] flex-1">
-            <div class="flex items-center mb-4">
+            <div class="flex items-center mb-4">    
                 <img src="image\v789_720.png" alt="GermanTech Logo" class="w-48 h-36 mr-2">
-               
+              
             </div>
             <p class="text-sm leading-relaxed font-montserrat">
                 Founded in 2019, Dayal Fabricator is driven by a passionate team of engineers committed to
@@ -112,7 +114,7 @@
             </p>
         </div>
         <!-- Vertical Divider (hide on small screens) -->
-        <div class="border-l border-white border-opacity-30 mx-4 hidden md:block"></div>
+        <div class="border-l border-white border-opacity-30 mx-4 hidden lg:block"></div>
         <!-- Quick Links -->
         <div class="flex-1 min-w-[180px]">
             <h3 class="font-bold text-lg mb-4 font-montserrat">Quick Links</h3>
@@ -120,7 +122,7 @@
                 <li><a href="./index.html" class="hover:underline">Home</a></li>
                 <li><a href="./About-us.html" class="hover:underline">About us</a></li>
                 <li><a href="./gallery.html" class="hover:underline">Gallery</a></li>
-                <li><a href="./testimonials.html" class="hover:underline">Testimonials</a></li>
+                <li><a href="./index.html" class="hover:underline">Testimonials</a></li>
                 <li><a href="./contact-us.html" class="hover:underline">Contact Us</a></li>
             </ul>
             <div class="mt-6">
@@ -161,7 +163,7 @@
                 </li>
                 <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
                     <span class="material-icons text-xl sm:text-2xl mr-0 sm:mr-2">call</span>
-                    <div class="flex flex-col sm:flex-row ">
+                    <div class="flex flex-col sm:flex-row gap-1 sm:gap-2">
                         <a href="tel:+919814868271" class="font-bold underline font-montserrat text-[12px] sm:text-sm">+91-9814686271</a>
                         <span class="hidden sm:inline">,</span>
                         <a href="tel:+919814468271" class="font-bold underline font-montserrat text-[12px] sm:text-sm">+91-9814468271</a>
