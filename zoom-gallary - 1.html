@@ -1,256 +1,179 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1512, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-      <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #eaf6fb 60%, #1a5276 100%);
-            min-height: 100vh;
-            position: relative;
-        }
-        .abstract-bg {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
-        .gallery-container {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-        .gallery-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1a5276;
-            margin-bottom: 2rem;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-        .gallery-image {
-            width: 880px;
-            max-width: 95vw;
-            height: 604px;
-            max-height: 60vh;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(26,82,118,0.25);
-            border: 4px solid #1a5276;
-        }
-        @media (max-width: 900px) {
-            .gallery-image {
-                width: 98vw;
-                height: auto;
-            }
-        }
-    </style>
-<style>
-        .font-lato {
-            font-family: 'Lato', sans-serif;
-        }
-    </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .font-lato {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
 </head>
+
 <body class="bg-[#043357] min-h-screen">
+
   <!-- Top Contact Bar -->
-   <div class="bg-gray-900 text-white text-[9px] sm:text-xs md:text-sm flex flex-col md:flex-row md:items-center md:justify-between px-2 md:px-4 py-2 gap-1 sm:gap-0">
-        <div class="flex items-center space-x-2 mb-1 md:mb-0">
-            <span class="text-orange-500">📞</span>
-            <span class="text-[10px] sm:text-xs md:text-sm">+91-9814868271, +9814468271</span>
-        
-        <div class="flex items-center space-x-2 mb-1 md:mb-0">
-            <span class="text-orange-500">✉️</span>
-            <span class="text-[10px] sm:text-xs md:text-sm">Dayalupvcwindow@gmail.com</span>
-        </div></div>
-        <div class="flex items-center">
-            <span class="material-icons text-orange-500 text-[13px] sm:text-base md:text-lg mr-1 hidden sm:inline-block">location_on</span>
-            <span class="block md:inline text-[10px] sm:text-xs md:text-sm">Tajpur road back side Barth box factory near Hp Gass Agency Ludhiana punjab</span>
-        </div>
+  <div
+    class="bg-gray-900 text-white text-[9px] sm:text-xs md:text-sm flex flex-col md:flex-row md:items-center md:justify-between px-2 md:px-4 py-2 gap-1 sm:gap-0">
+    <div class="flex items-center space-x-2 mb-1 md:mb-0">
+      <span class="text-orange-500">📞</span>
+      <span class="text-[10px] sm:text-xs md:text-sm">+91-9814868271, +9814468271</span>
     </div>
-    <!-- Navbar -->
-    <nav class="bg-white shadow flex  justify-around">
-        <div class="flex items-center">
-            <img src="image/v667_1279.png" alt="GermanTech Logo" class="w-20 h-8 sm:w-36 sm:h-12 md:w-60 md:h-20">
-        </div>
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex items-center space-x-2 sm:space-x-4 lg:space-x-8 font-semibold text-[10px] sm:text-sm md:text-base">
-            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
-            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
-            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
-            <li><a href="index.html" class="text-black">TESTIMONIALS</a></li>
-            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
-            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
-        </ul>
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden flex items-center">
-            <button id="mobile-menu-btn" class="flex flex-col space-y-1 focus:outline-none">
-                <span class="w-6 h-0.5 bg-black"></span>
-                <span class="w-6 h-0.5 bg-black"></span>
-                <span class="w-6 h-0.5 bg-black"></span>
-            </button>
-        </div>
-    </nav>
-    <!-- Mobile Menu (hidden by default, shown on button click) -->
-    <div id="mobile-menu" class="md:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden">
-        <ul class="flex flex-col items-start px-6 py-4 gap-2 text-[11px] font-semibold rounded-l-xl shadow-xl w-64 absolute right-0 top-0 bg-white">
-            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
-            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
-            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
-            <li><a href="index.html" class="text-black">TESTIMONIALS</a></li>
-            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
-            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
-        </ul>
+    <div class="flex items-center space-x-2 mb-1 md:mb-0">
+      <span class="text-orange-500">✉️</span>
+      <span class="text-[10px] sm:text-xs md:text-sm">Dayalupvcwindow@gmail.com</span>
     </div>
-    <script>
-        // Simple mobile menu toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        if (menuBtn && menu) {
-            menuBtn.addEventListener('click', function() {
-                menu.classList.toggle('hidden');
-            });
-        }
-    </script>
+    <div class="flex items-center">
+      <span
+        class="material-icons text-orange-500 text-[13px] sm:text-base md:text-lg mr-1 hidden sm:inline-block">location_on</span>
+      <span class="block md:inline text-[10px] sm:text-xs md:text-sm">Tajpur road back side Barth box factory near Hp
+        Gass Agency Ludhiana punjab</span>
+    </div>
+  </div>
 
+  <!-- Navbar -->
+  <nav class="bg-white shadow flex justify-between items-center px-4 md:px-12">
+    <div class="flex items-center">
+      <img src="image/v667_1279.png" alt="GermanTech Logo" class="w-20 sm:w-36 md:w-52">
+    </div>
+    <!-- Desktop Menu -->
+    <ul
+      class="hidden md:flex items-center space-x-4 lg:space-x-8 font-semibold text-[10px] sm:text-sm md:text-base">
+      <li><a href="index.html" class="text-black">HOME</a></li>
+      <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+      <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+      <li><a href="index.html" class="text-black">TESTIMONIALS</a></li>
+      <li><a href="gallery.html" class="text-black border-b-2 border-black">GALLERY</a></li>
+      <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+    </ul>
+    <!-- Mobile Menu Button -->
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-btn" class="flex flex-col space-y-1 focus:outline-none">
+        <span class="w-6 h-0.5 bg-black"></span>
+        <span class="w-6 h-0.5 bg-black"></span>
+        <span class="w-6 h-0.5 bg-black"></span>
+      </button>
+    </div>
+  </nav>
 
-     <section class="gallery-title bg-gradient-to-br from-[#0a3d62] to-[#3c6382] py-10 pb-16 rounded-b-[40px] min-h-screen" style="background-image: url('./image/our\ gallary.png'); background-size: cover; background-position: center;">
-        <div class="text-center text-[#145da0] text-3xl font-bold mb-8 tracking-wide">OUR GALLERY</div>
-        <div class="bg-white rounded-xl overflow-hidden shadow-lg flex items-center justify-center gallery-responsive">
-                <img src="./image/v771_518.png" alt="Gallery 1" class="gallery-image-responsive" />
-        </div>
-        <style>
-            /* Responsive gallery container for mobile and tablet */
-            @media (max-width: 900px) {
-                .gallery-responsive {
-                    width: 98vw !important;
-                    height: auto !important;
-                    left: 0 !important;
-                    margin: 0 auto !important;
-                    box-sizing: border-box;
-                }
-                .gallery-image-responsive {
-                    width: 100vw !important;
-                    max-width: 100vw !important;
-                    height: auto !important;
-                    max-height: 50vh !important;
-                    border-radius: 10px;
-                    border-width: 2px;
-                }
-            }
-            @media (max-width: 600px) {
-                .gallery-title {
-                    font-size: 1.3rem !important;
-                    margin-bottom: 1rem !important;
-                }
-                .gallery-image-responsive {
-                    max-height: 35vh !important;
-                }
-                .gallery-responsive {
-                    padding: 0.5rem !important;
-                }
-            }
-        </style>
-    </section>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+    class="md:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden transition-all duration-300">
+    <ul
+      class="flex flex-col items-start px-6 py-4 gap-2 text-[11px] font-semibold rounded-l-xl shadow-xl w-64 ml-auto bg-white">
+      <li><a href="index.html" class="text-black">HOME</a></li>
+      <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+      <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+      <li><a href="index.html" class="text-black">TESTIMONIALS</a></li>
+      <li><a href="gallery.html" class="text-black border-b-2 border-black">GALLERY</a></li>
+      <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Gallery Section -->
+  <section
+    class="bg-gradient-to-br from-[#0a3d62] to-[#3c6382] py-12 md:py-20 min-h-screen"
+    style="background-image: url('./image/our gallary.png'); background-size: cover; background-position: center;">
+    <h2 class="text-center text-2xl md:text-3xl font-bold text-[#145da0] mb-10 underline underline-offset-4">
+      OUR GALLERY
+    </h2>
+    <div
+      class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+      <!-- Example Images -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <img src="./image/v771_518.png" alt="Gallery 1"
+          class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300" />
+      </div>
+      
+      <!-- Add more images as needed -->
+    </div>
+  </section>
+
   <!-- Footer -->
-<footer class="w-full px-4 py-10 overflow-x-hidden"
+  <footer class="w-full px-4 py-10"
     style="background: linear-gradient(180deg, #42AEC1 0%, #236A80 18.15%, #01355C 100%);">
-    <div class="max-w-7xl mx-auto flex flex-wrap gap-8 text-white">
-        <!-- Logo & About -->
-        <div class="flex flex-col items-start min-w-[220px] flex-1">
-            <div class="flex items-center mb-4">
-                <img src="https://i.ibb.co/6bQ7Qp/germantech-logo.png" alt="GermanTech Logo" class="w-12 h-12 mr-2">
-                <div>
-                    <span class="font-bold text-xl block font-montserrat">GermanTech</span>
-                    <span class="text-xs tracking-widest font-montserrat">uPVC WINDOWS</span>
-                </div>
-            </div>
-            <p class="text-sm leading-relaxed font-montserrat">
-                Founded in 2019, Dayal Fabricator is driven by a passionate team of engineers committed to
-                delivering eco-friendly, sustainable solutions. Our focus lies in the development and manufacturing
-                of high-quality uPVC profiles that meet European standards.
-            </p>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
+
+      <!-- About -->
+      <div>
+        <div class="flex items-center mb-4">
+          <img src="https://i.ibb.co/6bQ7Qp/germantech-logo.png" alt="Logo" class="w-12 h-12 mr-2">
+          <div>
+            <span class="font-bold text-xl block">GermanTech</span>
+            <span class="text-xs tracking-widest">uPVC WINDOWS</span>
+          </div>
         </div>
-        <!-- Vertical Divider (hide on small screens) -->
-        <div class="border-l border-white border-opacity-30 mx-4 hidden md:block"></div>
-        <!-- Quick Links -->
-        <div class="flex-1 min-w-[180px]">
-            <h3 class="font-bold text-lg mb-4 font-montserrat">Quick Links</h3>
-            <ul class="space-y-2 text-sm font-montserrat flex flex-col gap-2">
-                <li><a href="./index.html" class="hover:underline">Home</a></li>
-                <li><a href="./About-us.html" class="hover:underline">About us</a></li>
-                <li><a href="./gallery.html" class="hover:underline">Gallery</a></li>
-                <li><a href="./index.html" class="hover:underline">Testimonials</a></li>
-                <li><a href="./contact-us.html" class="hover:underline">Contact Us</a></li>
-            </ul>
-            <div class="mt-6">
-                <select class="w-36 px-3 py-2 rounded shadow text-black font-montserrat">
-                    <option>Select language</option>
-                    <option>English</option>
-                    <option>Hindi</option>
-                    <option>Punjabi</option>
-                </select>
-                <div class="flex items-center mt-2 text-xs font-montserrat">
-                    <span>Powered By :</span>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png"
-                        alt="Google Translate" class="w-5 h-5 ml-1">
-                </div>
-            </div>
-        </div>
-        <!-- Dayal Fabricator Windows -->
-        <div class="flex-1 min-w-[180px]">
-            <h3 class="font-bold text-lg mb-4 font-montserrat">Dayal Fabricator Windows</h3>
-            <ul class="space-y-2 text-sm font-montserrat flex flex-col gap-2">
-                <li>UPVC Casement Windows</li>
-                <li>Tilt And Turn Windows</li>
-                <li>UPVC Sliding Doors</li>
-                <li>UPVC Casement Doors</li>
-                <li>Double Glazing Doors</li>
-                <li>DAYAL Steel Doors</li>
-            </ul>
-        </div>
-        <!-- Contact Info -->
-        <div class="flex-1 min-w-[180px]">
-            <h3 class="font-bold text-lg sm:text-xl mb-4 font-montserrat">Contact Info</h3>
-            <ul class="space-y-4 text-xs sm:text-sm font-montserrat flex flex-col gap-2">
-                <li class="flex items-start gap-2 sm:gap-4 opacity-100">
-                    <span class="material-icons text-xl sm:text-2xl align-middle">location_on</span>
-                    <span class="font-montserrat leading-snug w-full sm:w-48 whitespace-normal text-[11px] sm:text-sm">
-                        Tajpur road back side Barth box factory near Hp <br class="block sm:hidden">Gass Agency Ludhiana punjab
-                    </span>
-                </li>
-                <li class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
-                    <span class="material-icons text-xl sm:text-2xl mr-0 sm:mr-2">call</span>
-                    <div class="flex flex-col sm:flex-row ">
-                        <a href="tel:+919814868271" class="font-bold underline font-montserrat text-[12px] sm:text-sm">+91-9814686271</a>
-                        <span class="hidden sm:inline">,</span>
-                        <a href="tel:+919814468271" class="font-bold underline font-montserrat text-[12px] sm:text-sm">+91-9814468271</a>
-                    </div>
-                </li>
-                <li class="flex items-start gap-2 sm:gap-4">
-                    <span class="material-icons text-xl sm:text-2xl mr-0 sm:mr-2">email</span>
-                    <a href="mailto:Dayalupvcwindow@gmail.com" class="font-montserrat text-[12px] sm:text-sm break-all">Dayalupvcwindow@gmail.com</a>
-                </li>
-            </ul>
-        </div>
+        <p class="text-sm leading-relaxed">Founded in 2019, Dayal Fabricator is driven by a passionate team of engineers
+          committed to sustainable solutions...</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="./index.html" class="hover:underline">Home</a></li>
+          <li><a href="./About-us.html" class="hover:underline">About us</a></li>
+          <li><a href="./gallery.html" class="hover:underline">Gallery</a></li>
+          <li><a href="./index.html" class="hover:underline">Testimonials</a></li>
+          <li><a href="./contact-us.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Dayal Fabricator Windows</h3>
+        <ul class="space-y-2 text-sm">
+          <li>UPVC Casement Windows</li>
+          <li>Tilt And Turn Windows</li>
+          <li>UPVC Sliding Doors</li>
+          <li>UPVC Casement Doors</li>
+          <li>Double Glazing Doors</li>
+          <li>DAYAL Steel Doors</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="font-bold text-lg mb-4">Contact Info</h3>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2">
+            <span class="material-icons">location_on</span>
+            <span>Tajpur road back side Barth box factory near Hp Gass Agency Ludhiana, Punjab</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="material-icons">call</span>
+            <span>+91-9814686271 , +91-9814468271</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="material-icons">email</span>
+            <a href="mailto:Dayalupvcwindow@gmail.com">Dayalupvcwindow@gmail.com</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-xs text-white font-montserrat w-full">
-        © Copyright 2024-2025 by Dayal Fabricator. || Designed & Developed by <span class="font-bold font-montserrat">WebEarl
-            Technologies</span>
+    <div class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-xs text-white">
+      © 2024-2025 Dayal Fabricator | Designed by <span class="font-bold">WebEarl Technologies</span>
     </div>
-    <!-- Google Material Icons CDN -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</footer>
+  </footer>
 
 </body>
 </html>
