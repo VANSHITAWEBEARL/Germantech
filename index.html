@@ -12,6 +12,20 @@
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
+
+        @media (max-width: 1023px) {
+            .hex-img {
+                width: 12rem !important;
+                /* sm:w-48 */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hex-img {
+                width: 23rem !important;
+                /* lg:w-84 */
+            }
+        }
     </style>
 </head>
 
@@ -21,11 +35,12 @@
         <div class="flex items-center space-x-2 mb-1 lg:mb-0">
             <span class="text-orange-500">📞</span>
             <span class="text-[10px] sm:text-xs lg:text-sm">+91-9814868271, +9814468271</span>
-        
-        <div class="flex items-center space-x-2 mb-1 lg:mb-0">
-            <span class="text-orange-500">✉️</span>
-            <span class="text-[10px] sm:text-xs lg:text-sm">Dayalupvcwindow@gmail.com</span>
-        </div></div>
+
+            <div class="flex items-center space-x-2 mb-1 lg:mb-0">
+                <span class="text-orange-500">✉️</span>
+                <span class="text-[10px] sm:text-xs lg:text-sm">Dayalupvcwindow@gmail.com</span>
+            </div>
+        </div>
         <div class="flex items-center">
             <span class="material-icons text-orange-500 text-[13px] sm:text-base lg:text-lg mr-1 hidden sm:inline-block">location_on</span>
             <span class="block lg:inline text-[10px] sm:text-xs lg:text-sm">Tajpur road back side Barth box factory near Hp Gass Agency Ludhiana punjab</span>
@@ -76,11 +91,11 @@
         }
     </script>
     <!-- Hero Section -->
-     <section class="relative flex flex-col md:flex-row items-center md:pl-12 md:pt-16 overflow-hidden h-auto   md:h-[820px]"
+    <section class="relative flex flex-col lg:flex-row items-center pl-4 lg:pl-12 lg:pt-16 pt-6 overflow-hidden  h-[820px]"
         style="background-image: url('image/Rectangle63.png'); background-size: cover; background-position: center;">
-        <div class="md:w-1/2 py-16 md:text-start  z-10">
-            <h1 class="text-white text-4xl lg:text-6xl font-extrabold mb-6">Welcome To<br>
-                <span class="text-4xl md:text-5xl block mt-2">Dayal’s UPVC<br>Window And Door</span>
+        <div class="lg:w-1/2 lg:py-16 py-10  z-10">
+            <h1 class="text-white text-3xl lg:text-6xl font-extrabold mb-6">Welcome To<br>
+                <span class="text-3xl lg:text-5xl block mt-2">Dayal’s UPVC<br>Window And Door</span>
             </h1>
             <p class="text-white text-xl mb-8 font-semibold">Excellence and Innovation in Every uPVC Frame</p>
             <a href="#"
@@ -88,27 +103,24 @@
                 our product</a>
         </div>
         <!-- Images in hexagon shapes -->
-        <div class="w-1/2 flex justify-start items-center relative z-10 ">
+        <div class="w-1/2 flex justify-start items-center right-[-90px] md:right-[-188px] lg:right-0 relative z-10">
             <div class="relative w-full h-full flex items-center">
                 <!-- Background images behind hexagons -->
-                <div class="absolute rounded-lg shadow-lg w-full h-full md:right-0 -right-20" style="
+                <div class="absolute rounded-lg shadow-lg w-full h-full" style="
                         background-image: url('image/home1bg.jpg');
                         background-size: cover;
                         background-position: 5% center;
                         clip-path: polygon(23% 0%, 100% 0%, 100% 100%, 75% 100%, 23% 100%, 0% 50%);
                         z-index: 1;
                     ">
-                    <img src="image/Rectangle 55.png" alt="" class="w-100% h-full object-cover opacity-70">
+                    <img src="image/Rectangle 55.png" alt="" class="w-100% h-full object-cover right-0 opacity-70">
                 </div>
 
                 <!-- Hexagon images in front -->
                 <div class="flex flex-col relative items-center z-10">
-                    <img src="image/Polygon 1.png" alt=""
-                        class="md:w-84 w-60 object-cover  relative top-14 lg:-left-12 lg:top-10 drop-shadow-md">
-                    <img src="image/Polygon 2.png" alt=""
-                        class="w-84 w-60 object-cover relative top-6 -left-10 lg:-left-48 lg:-top-10 drop-shadow-md">
-                    <img src="image/Polygon 2 (2).png" alt=""
-                        class="w-84 w-60 object-cover -top-8 lg:-left-12 lg:-top-24 relative drop-shadow-md">
+                   <img src="image/Polygon 1.png" alt="" class="hex-img object-cover relative -left-12 top-16 lg:-left-12 lg:top-10 drop-shadow-md">
+<img src="image/Polygon 2.png" alt="" class="hex-img object-cover relative -left-32 lg:-left-48 lg:-top-10 drop-shadow-md">
+<img src="image/Polygon 2 (2).png" alt="" class="hex-img object-cover -top-16 -left-12 lg:-left-12 lg:-top-24 relative drop-shadow-md">
                 </div>
             </div>
         </div>
