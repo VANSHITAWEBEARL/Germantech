@@ -48,6 +48,51 @@
                 display: flex;
                 justify-content: center;
             }
+             .menu-btn, .close-btn {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: black;
+    }
+
+     .sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+  }
+  .sidebar.active { right: 0; }
+
+  .close-btn {
+    font-size: 26px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #043357;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1040;
+  }
+  .overlay.active { display: block; }
     </style>
 </head>
 
@@ -72,28 +117,77 @@
         </div>
     </div>
     <!-- Navbar -->
-    <nav class="bg-white shadow flex  justify-around">
-        <div class="flex items-center">
-            <img src="image\germantech_logo_no_bg.png" alt="GermanTech Logo" class="w-20 h-8 sm:w-36 sm:h-12 lg:w-60 lg:h-20">
-        </div>
-        <!-- Desktop Menu -->
-        <ul
-            class="hidden lg:flex items-center space-x-2 sm:space-x-4 lg:space-x-8 font-semibold text-[10px] sm:text-sm lg:text-base">
-            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
-            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
-            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
-            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
-            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
-        </ul>
-        <!-- Mobile Menu Button -->
-        <div class="lg:hidden flex items-center">
-            <button id="mobile-menu-btn" class="flex flex-col space-y-1 focus:outline-none">
-                <span class="w-6 h-0.5 bg-black"></span>
-                <span class="w-6 h-0.5 bg-black"></span>
-                <span class="w-6 h-0.5 bg-black"></span>
-            </button>
-        </div>
-    </nav>
+   <nav class="bg-white shadow flex justify-around">
+  <div class="flex items-center">
+    <img src="image/germantech_logo_no_bg.png" alt="GermanTech Logo" class="w-20 h-8 sm:w-36 sm:h-12 lg:w-60 lg:h-20">
+  </div>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden lg:flex items-center space-x-2 sm:space-x-4 lg:space-x-8 font-semibold text-[10px] sm:text-sm lg:text-base">
+    <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
+    <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+    <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+    <li><a href="gallery.html" class="text-black">GALLERY</a></li>
+    <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+    <!-- Sidebar open button -->
+    <button class="menu-btn text-2xl" id="openMenu">&#9776;</button>
+
+   
+  </ul>
+
+  <!-- Mobile Menu Button -->
+  <div class="lg:hidden flex items-center">
+    <button id="mobile-menu-btn" class="flex flex-col space-y-1 focus:outline-none">
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <button class="close-btn" id="closeMenu">&times;</button>
+  <h2>Contact Info</h2>
+  <p>📍 Tajpur road back side Barth box factory near Hp Gass Agency Ludhiana punjab</p>
+  <p>✉️ <a href="mailto:Dayalupvcwindow@gmail.com">Dayalupvcwindow@gmail.com</a></p>
+  <p>📞 +91-9814868271, +91-84468271</p>
+  <div>
+    <a href="#">🌐 Facebook</a><br>
+    <a href="#">🌐 Twitter</a><br>
+    <a href="#">🌐 Instagram</a>
+  </div>
+  <h3>Newsletter</h3>
+  <input type="email" placeholder="Email Address" style="width:100%; padding:8px; margin-top:5px;">
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+  <script>
+  const openMenu = document.getElementById('openMenu');
+  const closeMenu = document.getElementById('closeMenu');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
+
+  openMenu.addEventListener('click', () => {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+  });
+</script>
+
+      
+       
     <!-- Mobile Menu (hidden by default, shown on button click) -->
     <div id="mobile-menu" class="lg:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden">
         <ul
