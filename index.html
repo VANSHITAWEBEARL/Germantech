@@ -662,12 +662,9 @@
 </div>
 
         <style>
-            .testimonial-bg {
-                background-image: url('image/OUR TESTIMONIALS.png');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
+            
+       
+           
 
             .slider-wrapper {
                 max-width: 95%;
@@ -785,43 +782,100 @@
     </section>
 
     <script>
-        const slider = document.getElementById("testimonialSlider");
-        const slides = document.querySelectorAll(".testimonial-slide");
-        const dots = document.querySelectorAll(".dot");
-        const totalSlides = slides.length;
-        let currentIndex = 0;
+    const slider = document.getElementById("testimonialSlider");
+    const slides = document.querySelectorAll(".testimonial-slide");
+    const dots = document.querySelectorAll(".dot");
+    const totalSlides = slides.length;
 
-        function updateSlider(index) {
-            slider.style.transform = `translateX(-${index * 100}%)`;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle("bg-[#054C73]", i === index);
-                dot.classList.toggle("bg-gray-300", i !== index);
-            });
-        }
+    let currentIndex = 1; // start from first cloned slide
+    let autoSlide;
 
-        document.getElementById("nextBtn").addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlider(currentIndex);
-        });
+    // Clone first and last slide for smooth infinite loop
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
 
-        document.getElementById("prevBtn").addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateSlider(currentIndex);
-        });
+    firstClone.id = "first-clone";
+    lastClone.id = "last-clone";
 
+    slider.appendChild(firstClone);
+    slider.insertBefore(lastClone, slides[0]);
+
+    const allSlides = document.querySelectorAll(".testimonial-slide");
+
+    const slideWidth = 100; // percent width
+    slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+
+    function updateDots(index) {
         dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                currentIndex = i;
-                updateSlider(currentIndex);
-            });
+            dot.classList.toggle("bg-[#054C73]", i === index);
+            dot.classList.toggle("bg-gray-300", i !== index);
         });
+    }
 
-        // Auto slide
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlider(currentIndex);
-        }, 3000);
-    </script>
+    function moveToSlide(index) {
+        slider.style.transition = "transform 0.5s ease-in-out";
+        slider.style.transform = `translateX(-${index * slideWidth}%)`;
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        if (currentIndex >= allSlides.length - 1) return;
+        currentIndex++;
+        moveToSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        if (currentIndex <= 0) return;
+        currentIndex--;
+        moveToSlide(currentIndex);
+    }
+
+    // Reset position when reaching clone
+    slider.addEventListener("transitionend", () => {
+        if (allSlides[currentIndex].id === "first-clone") {
+            slider.style.transition = "none";
+            currentIndex = 1;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        }
+        if (allSlides[currentIndex].id === "last-clone") {
+            slider.style.transition = "none";
+            currentIndex = totalSlides;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        }
+        updateDots((currentIndex - 1 + totalSlides) % totalSlides);
+    });
+
+    // Button controls
+    document.getElementById("nextBtn").addEventListener("click", () => {
+        nextSlide();
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+        prevSlide();
+    });
+
+    // Dot controls
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            moveToSlide(i + 1);
+        });
+    });
+
+    // Auto slide
+    function startAutoSlide() {
+        autoSlide = setInterval(nextSlide, 3000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    slider.addEventListener("mouseenter", stopAutoSlide);
+    slider.addEventListener("mouseleave", startAutoSlide);
+
+    startAutoSlide();
+</script>
+
 
 
 
