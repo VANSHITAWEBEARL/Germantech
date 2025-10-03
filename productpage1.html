@@ -118,26 +118,48 @@
             class="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-12 mb-12 lg:mb-32 gap-8 lg:gap-12 z-10 w-full max-w-[1512px]">
 
             <!-- Left Card -->
-            <div class="z-10 flex flex-col items-start justify-start px-6 py-8 lg:px-8 lg:py-12 rounded-xl shadow-lg bg-black bg-opacity-30"
-                style="width:100%; max-width:333px; min-height:615px;">
-                <h2 class="text-white text-xl lg:text-2xl font-bold mb-6 lg:mb-8">Categories</h2>
-                <ul class="text-white text-sm lg:text-base font-medium space-y-4 lg:space-y-6">
-                    <li><a href="productpage1.html">windows and Door</a></li>
-                    <li><a href="productpage2.html">Allumum window and Door</a></li>
-                    <li><a href="productpage3.html">wpc door and wall panel</a></li>
-                    <li><a href="productpage1.html">UPVC Casement Doors</a></li>
-                    <li><a href="productpage1.html">Double Glazing Doors</a></li>
-                    <li><a href="productpage1.html">DAYAL Steel Doors</a></li>
-                </ul>
-            </div>
+            <div class="z-10 flex flex-col items-start justify-start px-6 py-8 lg:px-8 lg:py-12 rounded-xl shadow-lg bg-black bg-opacity-30 lg:h-[557px]"
+    style="width:100%; max-width:333px;">
 
+    <button  id="dropdownBtn" class="text-white text-xl w-full block lg:hidden lg:text-2xl font-bold mb-6 lg:mb-8">Categories <span id="arrow" class="ml-2">▼</span></button>
+
+    <!-- Mobile dropdown only -->
+    
+       
+        <ul id="dropdownMenu" class="hidden mt-2 text-white text-sm font-medium space-y-2">
+            <li><a href="productpage1.html">windows and Door</a></li>
+            <li><a href="productpage2.html">Allumum window and Door</a></li>
+            <li><a href="productpage3.html">wpc door and wall panel</a></li>
+            <li><a href="productpage1.html">UPVC Casement Doors</a></li>
+            <li><a href="productpage1.html">Double Glazing Doors</a></li>
+            <li><a href="productpage1.html">DAYAL Steel Doors</a></li>
+        </ul>
+    </div>
+
+    <!-- Desktop list (unchanged, design intact) -->
+    <ul class="hidden lg:block text-white text-sm lg:text-base font-medium space-y-4 lg:space-y-6">
+        <li><a href="productpage1.html">windows and Door</a></li>
+        <li><a href="productpage2.html">Allumum window and Door</a></li>
+        <li><a href="productpage3.html">wpc door and wall panel</a></li>
+        <li><a href="productpage1.html">UPVC Casement Doors</a></li>
+        <li><a href="productpage1.html">Double Glazing Doors</a></li>
+        <li><a href="productpage1.html">DAYAL Steel Doors</a></li>
+    </ul>
+</div>
+<script>
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    const arrow = document.getElementById("arrow");
+
+    dropdownBtn.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("hidden");
+        arrow.textContent = dropdownMenu.classList.contains("hidden") ? "▼" : "▲";
+    });
+</script>
 
             <div class="max-w-5xl flex flex-col md:flex-row w-full rounded-xl shadow-lg text-white relative overflow-hidden flex h-[1000.56px;] md:h-[432px] lg:h-[557px;]"
                 style="background: linear-gradient(270deg, #00335B 0%, #328290 37.39%, #46B7CB 46.05%); ">
-                <!-- Left Side Image -->
-                <!-- <div class="flex justify-center overflow-hidden   w-[550.88px] .h-57256px">
-                    <img src="image/Rectangle 2286.png" alt="UPVC Door" class=" object-cover w-100% h-100%">
-                </div> -->
+               
 
                 <div class="w-full sm:w-2/3 md:w-1/2 mx-auto">
                     <img src="image/Rectangle 2286.png" alt="UPVC Door" class="w-full h-auto object-cover rounded-xl" />

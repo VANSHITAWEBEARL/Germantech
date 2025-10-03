@@ -20,9 +20,10 @@
       border-radius: 12px;
       box-shadow: 0 8px 32px rgba(26,82,118,0.25);
       border: 4px solid #1a5276;
+      
     }
      .position{
-        background-position: 100% 100%;
+        background-size: 100% 100%;
     }
   </style>
 </head>
@@ -97,12 +98,12 @@
         }
     </script>
   <!-- Gallery Section -->
-  <section class="py-10 pb-16  min-h-[100vh]  position bg-cover bg-center" 
+  <section class="py-10 pb-16  min-h-[100%] position bg-center" 
     style="background-image: url('./image/our gallary.png');">
     <h2 class="text-center text-[#145da0] text-3xl sm:text-4xl font-bold mb-8 tracking-wide">OUR GALLERY</h2>
 
-    <div class="bg-white rounded-xl overflow-hidden shadow-lg flex items-center justify-center max-w-5xl mx-auto">
-      <img src="./image/v773_646.png" alt="Gallery 1" class=" w-full max-h-[70vh] object-cover" />
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg flex items-center justify-center max-w-2xl mx-auto">
+      <img src="./image/v773_646.png" alt="Gallery 1" class=" w-full  max-h-[70vh] lg:max-h-[40vh] object-cover" />
     </div>
   </section>
 
@@ -133,6 +134,12 @@
                     <li><a href="./gallery.html" class="hover:underline">Gallery</a></li>
                   
                     <li><a href="./contact-us.html" class="hover:underline">Contact Us</a></li>
+                    <div class="toggle-container">
+        <label class="toggle-switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
                 </ul>
                 <div class="mt-6">
                     <select class="w-40 px-3 py-2 rounded shadow text-black font-montserrat">
