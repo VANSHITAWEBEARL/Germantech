@@ -95,7 +95,7 @@
     </script>
     <!-- Main Content -->
     <div
-        class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(100vh-200px)] pt-10 relative bg-cover bg-center bg-no-repeat bg-change">
+        class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(240vh-200px)] pt-10 relative bg-cover bg-center bg-no-repeat bg-change">
 
 
         <style>
@@ -118,57 +118,61 @@
             class="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-12 mb-12 lg:mb-32 gap-8 lg:gap-12 z-10 w-full max-w-[1512px]">
 
             <!-- Left Card -->
-           <div class="z-10 flex flex-col items-start justify-start px-6 py-2 lg:px-8 lg:py-12 rounded-xl shadow-lg bg-black bg-opacity-30 h-auto lg:h-[557px]"
-                style="width:100%; max-width:333px;">
+          <div class="z-10 flex flex-col items-start justify-start px-6 py-2 lg:px-8 lg:py-12 rounded-xl shadow-lg bg-black bg-opacity-30 h-auto lg:h-[557px]"
+    style="width:100%; max-width:333px;">
 
-                <!-- Mobile Dropdown -->
-                <div class="w-full block lg:hidden">
-                    <button id="dropdownBtn"
-                        class="text-white text-xl w-full block font-bold py-1 rounded-md flex justify-between items-center">
-                        Categories
-                        <span id="arrow" class="ml-2">▼</span>
-                    </button>
+    <!-- Mobile Dropdown -->
+    <div class="w-full block lg:hidden">
+        <button id="dropdownBtn"
+            class="text-white text-xl w-full block font-bold py-1 rounded-md flex justify-between items-center">
+            Categories
+            <span id="arrow" class="ml-2 transition-transform duration-300">
+                <i class="fa-solid fa-chevron-down"></i>
+            </span>
+        </button>
 
-                    <ul id="dropdownMenu"
-                        class="max-h-0 overflow-hidden transition-all duration-300  text-white text-sm font-medium space-y-2   rounded-md  w-full">
-                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">windows and Door</a></li>
-                        <li><a href="productpage2.html" class="block hover:text-[#42AEC1 text-sm]">Allumum window and Door</a></li>
-                        <li><a href="productpage3.html" class="block hover:text-[#42AEC1 text-sm]">wpc door and wall panel</a></li>
-                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">UPVC Casement Doors</a></li>
-                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">Double Glazing Doors</a></li>
-                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">DAYAL Steel Doors</a></li>
-                    </ul>
-                </div>
+        <!-- dropdown background constant rahe -->
+        <div class="w-full overflow-hidden transition-all duration-500 ease-in-out">
+            <ul id="dropdownMenu"
+                class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out text-white text-sm font-medium space-y-2 rounded-md w-full">
+                <li><a href="productpage1.html" class="block hover:text-[#42AEC1]">windows and Door</a></li>
+                <li><a href="productpage2.html" class="block hover:text-[#42AEC1]">Allumum window and Door</a></li>
+                <li><a href="productpage3.html" class="block hover:text-[#42AEC1]">wpc door and wall panel</a></li>
+                <li><a href="productpage1.html" class="block hover:text-[#42AEC1]">UPVC Casement Doors</a></li>
+                <li><a href="productpage1.html" class="block hover:text-[#42AEC1]">Double Glazing Doors</a></li>
+                <li><a href="productpage1.html" class="block hover:text-[#42AEC1]">DAYAL Steel Doors</a></li>
+            </ul>
+        </div>
+    </div>
 
-                <!-- Desktop list -->
-                <ul class="hidden lg:block text-white text-sm lg:text-base font-medium space-y-4 lg:space-y-6">
-                    <li><a href="productpage1.html">windows and Door</a></li>
-                    <li><a href="productpage2.html">Allumum window and Door</a></li>
-                    <li><a href="productpage3.html">wpc door and wall panel</a></li>
-                    <li><a href="productpage1.html">UPVC Casement Doors</a></li>
-                    <li><a href="productpage1.html">Double Glazing Doors</a></li>
-                    <li><a href="productpage1.html">DAYAL Steel Doors</a></li>
-                </ul>
-            </div>
+    <!-- Desktop list -->
+    <ul class="hidden lg:block text-white text-sm lg:text-base font-medium space-y-4 lg:space-y-6">
+        <li><a href="productpage1.html">windows and Door</a></li>
+        <li><a href="productpage2.html">Allumum window and Door</a></li>
+        <li><a href="productpage3.html">wpc door and wall panel</a></li>
+        <li><a href="productpage1.html">UPVC Casement Doors</a></li>
+        <li><a href="productpage1.html">Double Glazing Doors</a></li>
+        <li><a href="productpage1.html">DAYAL Steel Doors</a></li>
+    </ul>
+</div>
 
-            <script>
-                const dropdownBtn = document.getElementById("dropdownBtn");
-                const dropdownMenu = document.getElementById("dropdownMenu");
-                const arrow = document.getElementById("arrow");
+<script>
+    const dropdownBtn = document.getElementById("dropdownBtn");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+    const arrow = document.getElementById("arrow");
 
-                dropdownBtn.addEventListener("click", () => {
-                    if (dropdownMenu.classList.contains("max-h-0")) {
-                        dropdownMenu.classList.remove("max-h-0");
-                        dropdownMenu.classList.add("max-h-96"); // Adjust max height as needed
-                        arrow.textContent = "▲";
-                    } else {
-                        dropdownMenu.classList.add("max-h-0");
-                        dropdownMenu.classList.remove("max-h-96");
-                        arrow.textContent = "▼";
-                    }
-                });
-            </script>
-
+    dropdownBtn.addEventListener("click", () => {
+        if (dropdownMenu.classList.contains("max-h-0")) {
+            dropdownMenu.classList.remove("max-h-0");
+            dropdownMenu.classList.add("max-h-96"); // expand
+            arrow.classList.add("rotate-180"); // arrow rotate
+        } else {
+            dropdownMenu.classList.add("max-h-0");
+            dropdownMenu.classList.remove("max-h-96"); // collapse
+            arrow.classList.remove("rotate-180"); // arrow reset
+        }
+    });
+</script>
 
             <div class="max-w-5xl flex flex-col md:flex-row w-full rounded-xl shadow-lg text-white relative overflow-hidden flex h-[1000.56px;] md:h-[432px] lg:h-[557px;]"
                 style="background: linear-gradient(270deg, #00335B 0%, #328290 37.39%, #46B7CB 46.05%); ">

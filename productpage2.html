@@ -95,7 +95,7 @@
     
     <!-- Main Content -->
     <div
-        class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(100vh-200px)] pt-10 pb-16 relative bg-cover bg-center bg-no-repeat"
+        class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(240vh-200px)] pt-10 pb-16 relative bg-cover bg-center bg-no-repeat"
         style="background-image: url('image/1stproduct.png');">
 
        
@@ -105,10 +105,30 @@
             class="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-12 mb-12 lg:mb-32 gap-8 lg:gap-12 z-10 w-full max-w-[1512px]">
 
             <!-- Left Card -->
-            <div class="z-10 flex flex-col items-start justify-start px-6 py-8 lg:px-8 lg:py-12 rounded-xl shadow-lg bg-black bg-opacity-30"
-                style="width:100%; max-width:333px; min-height:615px;">
-                <h2 class="text-white text-xl lg:text-2xl font-bold mb-6 lg:mb-8">Categories</h2>
-                <ul class="text-white text-sm lg:text-base font-medium space-y-4 lg:space-y-6">
+            <div class="z-10 flex flex-col items-start justify-start px-6 py-2 lg:px-8 lg:py-12 rounded-xl shadow-lg bg-black bg-opacity-30 h-auto lg:h-[557px]"
+                style="width:100%; max-width:333px;">
+
+                <!-- Mobile Dropdown -->
+                <div class="w-full block lg:hidden">
+                    <button id="dropdownBtn"
+                        class="text-white text-xl w-full block font-bold py-1 rounded-md flex justify-between items-center">
+                        Categories
+                        <span id="arrow" class="ml-2">▼</span>
+                    </button>
+
+                    <ul id="dropdownMenu"
+                        class="max-h-0 overflow-hidden transition-all duration-300  text-white text-sm font-medium space-y-2   rounded-md  w-full">
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">windows and Door</a></li>
+                        <li><a href="productpage2.html" class="block hover:text-[#42AEC1 text-sm]">Allumum window and Door</a></li>
+                        <li><a href="productpage3.html" class="block hover:text-[#42AEC1 text-sm]">wpc door and wall panel</a></li>
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">UPVC Casement Doors</a></li>
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">Double Glazing Doors</a></li>
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">DAYAL Steel Doors</a></li>
+                    </ul>
+                </div>
+
+                <!-- Desktop list -->
+                <ul class="hidden lg:block text-white text-sm lg:text-base font-medium space-y-4 lg:space-y-6">
                     <li><a href="productpage1.html">windows and Door</a></li>
                     <li><a href="productpage2.html">Allumum window and Door</a></li>
                     <li><a href="productpage3.html">wpc door and wall panel</a></li>
@@ -118,6 +138,23 @@
                 </ul>
             </div>
 
+            <script>
+                const dropdownBtn = document.getElementById("dropdownBtn");
+                const dropdownMenu = document.getElementById("dropdownMenu");
+                const arrow = document.getElementById("arrow");
+
+                dropdownBtn.addEventListener("click", () => {
+                    if (dropdownMenu.classList.contains("max-h-0")) {
+                        dropdownMenu.classList.remove("max-h-0");
+                        dropdownMenu.classList.add("max-h-96"); // Adjust max height as needed
+                        arrow.textContent = "▲";
+                    } else {
+                        dropdownMenu.classList.add("max-h-0");
+                        dropdownMenu.classList.remove("max-h-96");
+                        arrow.textContent = "▼";
+                    }
+                });
+            </script>
 
            <div class="max-w-5xl w-full text-white relative overflow-hidden flex flex-col lg:flex-row h-[821.56px;] lg:h-[621.56px;]"
                 style="background: #00335B; border-top-right-radius:110px; border-bottom-left-radius:110px">
