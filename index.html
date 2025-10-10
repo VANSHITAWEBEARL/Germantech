@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+        }
+
+        @media (max-width: 1023px) {
+            .hex-img {
+                width: 12rem !important;
+                /* sm:w-48 */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hex-img {
+                width: 23rem !important;
+                /* lg:w-84 */
+            }
+        }
+        .SairaStencilOne{
+           font-family:  Saira Stencil One;
+          
+        }
+        
+            .slider-wrapper {
+                max-width: 95%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            #testimonialSlider {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .testimonial-slide {
+                flex: 0 0 100%;
+                display: flex;
+                justify-content: center;
+            }
+             .menu-btn, .close-btn {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: black;
+    }
+
+ 
+       
+   .sidebar {
+      transform: translateX(100%);
+      transition: transform 0.4s ease-in-out;
+    }
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    /* Open button slide effect */
+    .menu-btn {
+      transition: transform 0.4s ease-in-out;
+    }
+    .menu-btn.move-left {
+      transform: translateX(-331px); /* Moves visibly to left */
+    }
+
+    /* Close button visibility */
+    .close-btn {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .close-btn.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+  
+
+.SairaStencilOne{
+           font-family:  Saira Stencil One;
+          
+        }
+    
+  
+    </style>
+</head>
+
+<body>
+  <header>
+
+   <div class="bg-gray-900 text-white text-[9px] sm:text-xs lg:text-sm flex flex-col lg:flex-row lg:items-center lg:justify-between px-2 lg:px-4 py-2 gap-1 sm:gap-0">
+    <div class="flex items-center justify-between  mb-1 lg:mb-0">
+     <div>
+      <span class="text-orange-500">📞</span>
+      <span>+91-9814868271</span>
+      </div>
+      <div class="flex items-center space-x-2 mb-1 lg:mb-0">
+        <span class="text-orange-500">✉️</span>
+        <span>Dayalupvcwindow@gmail.com</span>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Navbar -->
+  <nav class="left-0 w-full bg-white shadow flex justify-between items-center px-6 py-3 z-50">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="image/germantech_logo_no_bg.png" alt="GermanTech Logo" class="w-24 sm:w-36 lg:w-48">
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden lg:flex items-center space-x-6 font-semibold text-gray-800">
+      <li><a href="/index.html" class="hover:text-blue-600">HOME</a></li>
+      <li><a href="/About-us.html" class="hover:text-blue-600">ABOUT US</a></li>
+      <li><a href="/productpage1.html" class="hover:text-blue-600">OUR PRODUCT</a></li>
+      <li><a href="/gallery.html" class="hover:text-blue-600">GALLERY</a></li>
+      <li><a href="/contact-us.html" class="hover:text-blue-600">CONTACT US</a></li>
+    </ul>
+     <!-- Mobile Menu Button -->
+      <div class="lg:hidden flex items-center">
+  <button id="mobile-menu-btn" class="flex flex-col space-y-1 focus:outline-none">
+    <span class="w-6 h-0.5 bg-black"></span>
+    <span class="w-6 h-0.5 bg-black"></span>
+    <span class="w-6 h-0.5 bg-black"></span>
+  </button>
+</div>
+    <!-- Sidebar Open Button -->
+    <button id="openBtn" class="text-3xl lg:flex hidden focus:outline-none">&#9776;</button>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar"
+       class="fixed top-0 right-[-400px]    w-[300px] sm:w-[400px] h-full bg-white shadow-2xl z-50 transition-all duration-500 ease-in-out p-6">
+    <button id="closeBtn" class="absolute top-3 right-3 text-3xl font-bold">&times;</button>
+
+    <p class="text-gray-700 mb-4 mt-14  pl-[10px] pr-[40px]">
+      At Dayal Fabricator, we are dedicated to providing exceptional quality and innovative solutions for all your uPVC door and window needs.
+    </p>
+     
+    <h3 class="font-semibold text-xl mb-2  pl-[10px] mt-16">Contact Info:</h3>
+    <div class="pl-[14px] text-[#0000000]">
+      <p class="flex flex-row gap-3 items-center SairaStencilOne pr-12"> <img src="image\Vector (28).png"> Tajpur road back side Barth box <br> factory near Hp Gass<br> Agency Ludhiana Punjab</p>
+      <p class="flex flex-row gap-3 mt-10 "> <img src="image\Vector (27).png"><a href="mailto:Dayalupvcwindow@gmail.com" class="text-[#0000000] underline">Dayalupvcwindow@gmail.com</a></p>
+      <p class="flex flex-row gap-3 mt-10 "><img src="image\Vector (29).png"><span class="underline"> +91-9814868271, +91-84468271</span></p>
+    </div>
+
+    <div class="flex mt-8 pl-4 gap-3">
+      <a href="#"><img src="image\image 6 (2).png"  alt=""></a>
+      <a href="#"><img src="image\image 7.png"  alt=""></a>
+      <a href="#"><img src="image\image 8.png"  alt=""></a>
+    </div>
+
+    <h3 class="font-semibold text-xl pl-4 mt-6 mb-2">Newsletter:</h3>
+    <div class="flex pl-4">
+      <input type="email" placeholder="Email Address" class="flex  text-[ #7E7474] bg-[#D9D9D9] rounded-l-md px-3 py-2 focus:outline-none">
+      <button class="bg-[#D9D9D9] text-[ #7E7474] px-4 rounded-r-md "><img src="image\Vector (30).png"></button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.getElementById("closeBtn");
+
+  openBtn.addEventListener("click", () => {
+    sidebar.style.right = "0";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.style.right = "-400px";
+  });
+</script>
+      <!-- Mobile Menu (hidden by default, shown on button click) -->
+    <div id="mobile-menu" class="lg:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden">
+        <ul
+            class="flex flex-col items-start px-6 py-4 gap-2 text-[11px] font-semibold rounded-l-xl shadow-xl w-64 absolute right-1 top-[26px] bg-white">
+            <li><a href="index.html" class="text-black border-b-2 border-black">HOME</a></li>
+            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+            <li><a href="productpage1.html" class="text-black">POR PRODUCT</a></li>
+            
+            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
+            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+        </ul>
+    </div>
+    <script>
+        // Simple mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (menuBtn && menu) {
+            menuBtn.addEventListener('click', function () {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+    <!-- Hero Section -->
+    <section
+        class="relative flex flex-col lg:flex-row items-center pl-4 lg:pl-12 lg:pt-16 pt-6 overflow-hidden  h-[820px]"
+        style="background-image: url('image/Rectangle63.png'); background-size: cover; background-position: center;">
+        <div class="lg:w-1/2 lg:py-16 py-10  z-10">
+            
+            <h1 class="text-white SairaStencilOne text-3xl lg:text-6xl   font-extrabold  mb-6  ">Welcome To<br>
+                <span class="text-3xl lg:text-5xl SairaStencilOne block mt-2">Dayal’s UPVC<br>Window And Door</span>
+            </h1>
+            <p class="text-white text-xl mb-8 SairaStencilOne font-semibold">Excellence and Innovation in Every uPVC Frame</p>
+            <a href="#"
+                class="inline-block px-8 py-3 border-2 border-white text-white rounded hover:bg-white SairaStencilOne hover:text-cyan-700 transition">Explore
+                our product</a>
+        </div>
+        <!-- Images in hexagon shapes -->
+        <div class="w-1/2 flex justify-start items-center right-[-90px] md:right-[-188px] lg:right-0 relative z-10">
+            <div class="relative w-full h-full flex items-center">
+                <!-- Background images behind hexagons -->
+                <div class="absolute rounded-lg shadow-lg w-full h-full" style="
+                        background-image: url('image/home1bg.jpg');
+                        background-size: cover;
+                        background-position: 5% center;
+                        clip-path: polygon(23% 0%, 100% 0%, 100% 100%, 75% 100%, 23% 100%, 0% 50%);
+                        z-index: 1;
+                    ">
+                    <img src="image/Rectangle 55.png" alt="" class="w-100% h-full object-cover right-0 opacity-70">
+                </div>
+
+                <!-- Hexagon images in front -->
+                <div class="flex flex-col relative items-center z-10">
+                    <img src="image/Polygon 1.png" alt=""
+                        class="hex-img object-cover relative -left-12 top-16 lg:-left-12 lg:top-10 drop-shadow-md">
+                    <img src="image/Polygon 2.png" alt=""
+                        class="hex-img object-cover relative -left-32 lg:-left-48 lg:-top-10 drop-shadow-md">
+                    <img src="image/Polygon 2 (2).png" alt=""
+                        class="hex-img object-cover -top-16 -left-12 lg:-left-12 lg:-top-24 relative drop-shadow-md">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- About Us Section -->
+    <section
+        class="max-w-5xl mx-auto mt-12 bg-[#E1E1E1] rounded-2xl shadow-lg flex flex-col lg:flex-row overflow-hidden">
+        <!-- Left: Image with custom curve -->
+        <div class="relative w-full lg:w-1/2 h-auto flex justify-center items-center sm:mb-4 lg:mb-0">
+            <img src="image/v738_62.png" alt="House"
+                class="w-full h-auto max-w-[379px] sm:max-w-[772px] lg:max-w-full" />
+        </div>
+        <!-- Right: Content -->
+        <div class="w-full lg:w-1/2 p-4 sm:p-6 lg:p-10 flex flex-col justify-center text-left lg:text-justify"
+            style="background: linear-gradient(270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%);">
+            <h2
+                class="text-white text-[15px] sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-2 SairaStencilOne underline underline-offset-4">
+                ABOUT US</h2>
+            <h3 class="text-white text-[13px] sm:text-lg lg:text-xl font-bold SairaStencilOne mb-3 sm:mb-4">Welcome to Dayal's UPVC
+                Window and Door</h3>
+            <p
+                class="text-white text-[12px] sm:text-sm lg:text-[16px] SairaStencilOne font-medium mb-3 sm:mb-4 lg:mb-8 leading-normal tracking-normal text-left lg:text-justify font-[Montserrat]">
+                Founded in 2019, Dayal Fabricator is driven by a passionate team of engineers dedicated to developing
+                and manufacturing high-performance uPVC profiles that meet European standards. Our innovative products
+                enhance living and working spaces by reducing heat, minimizing noise, and requiring no maintenance.
+                Termite resistance and environmentally safe materials reflect our commitment to sustainability. With
+                advanced machinery and in-house extrusion facilities, we ensure every profile meets the highest
+                benchmarks of modern design and performance.
+            </p>
+            <div class="flex  items-center justify-between mb-2 sm:mb-2 lg:mb-8 gap-2 sm:gap-4">
+                <div class="flex flex-col items-center w-1/3 min-w-[60px] sm:min-w-[80px]">
+                    <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white mb-1 sm:mb-2" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                    </svg>
+                    <span class="text-white text-[10px] sm:text-xs SairaStencilOne font-semibold">QUALITY</span>
+                </div>
+                <div class="flex flex-col items-center w-1/3 min-w-[60px] sm:min-w-[80px]">
+                    <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white mb-1 sm:mb-2" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 2l2 7h7l-5.5 4 2 7-5.5-4-5.5 4 2-7L3 9h7z" />
+                    </svg>
+                    <span class="text-white text-[10px] sm:text-xs SairaStencilOne font-semibold">DURABILITY</span>
+                </div>
+                <div class="flex flex-col items-center w-1/3 min-w-[60px] sm:min-w-[80px]">
+                    <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white mb-1 sm:mb-2" fill="none" stroke="currentColor"
+                        stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 0v10l6 4" />
+                    </svg>
+                    <span class="text-white text-[10px] sm:text-xs SairaStencilOne font-semibold">ECO-FRIENDLY</span>
+                </div>
+            </div>
+            <button
+                class="border border-white w-full lg:w-48 w-48 text-white SairaStencilOne px-4 sm:px-8 py-2 rounded-full hover:bg-white hover:text-[#00335b] transition  text-xs sm:text-base md:-right-[260px] -right-[110px] lg:-right-[245px] relative">Learn
+                More</button>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section
+        class="flex flex-col lg:flex-row relative w-full lg:h-[720px] justify-center items-center mt-6 lg:mt-10 bg-white overflow-hidden py-4 lg:py-8 shadow-lg text-[11px] sm:text-base">
+        <!-- Decorative background image instead of SVG -->
+        <img src="image/Group 23.png" alt="Decorative Background"
+            class="hidden md:flex absolute inset-0 w-full h-full pointer-events-none z-0" />
+        <img src="image\Frame 186.png" alt="Decorative Background"
+            class="md:hidden flex absolute inset-0 w-full h-full pointer-events-none z-0" />
+        <div class="relative z-10 flex flex-col items-center w-full px-2 lg:px-0">
+            <h2 class="text-[#00335b] text-xl SairaStencilOne sm:text-2xl lg:text-3xl lg:text-4xl font-bold mb-4 lg:mb-8 text-center">
+                We Are Best Quality UPVC<br>
+                Window and Door Solutions
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 w-full max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-xl shadow-xl flex flex-col items-center p-2 sm:p-4 lg:pb-0 lg:p-6 min-h-[180px] sm:min-h-[220px] lg:min-h-[306px] transition">
+                    <img src="image\Vector (20).png" class="w-10 h-10 lg:w-20 lg:h-20 text-[#00335b] mb-2 lg:mb-6"
+                        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <h3 class="text-[12px] lg:text-lg font-semibold text-center mb-1  SairaStencilOne lg:mb-3">Eco-friendly
+                        UPVC<br>Windows</h3>
+                    <p class="text-gray-600 text-center text-[14px] SairaStencilOne lg:text-base">sustainably crafted UPVC windows
+                        offering superior insulation and durability.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-xl shadow-xl flex flex-col items-center p-2 sm:p-4 lg:pb-0 lg:p-6 min-h-[180px] sm:min-h-[220px] lg:min-h-[306px] transition">
+                    <img src="image\Vector (21).png" class="w-10 h-10 lg:w-20 lg:h-20 text-[#00335b] mb-2 lg:mb-6"
+                        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <h3 class="text-[12px] lg:text-lg font-semibold text-center mb-1 SairaStencilOne lg:mb-3">Morden UPVC<br>Doors</h3>
+                    <p class="text-gray-600 text-center text-[14px] SairaStencilOne lg:text-base">Enhance security and aesthetics with
+                        our modern UPVC door solutions.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-xl shadow-xl flex flex-col items-center p-2 sm:p-4 lg:pb-0 lg:p-6 min-h-[180px] sm:min-h-[220px] lg:min-h-[306px] transition">
+                    <img src="image/Group 29.png" class="w-10 h-10 lg:w-20 lg:h-20 text-[#00335b] mb-2 lg:mb-6"
+                        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <h3 class="text-[12px] lg:text-lg font-semibold text-center SairaStencilOne mb-1 lg:mb-3">Bespoke UPVC<br>Solutions
+                    </h3>
+                    <p class="text-gray-600 text-center text-[14px] SairaStencilOne lg:text-base">Custom- designed UPVC products
+                        tailored to meet your unique specifications.</p>
+                </div>
+                <!-- Card 4 -->
+                <div
+                    class="bg-white rounded-xl shadow-xl flex flex-col items-center p-2 sm:p-4 lg:pb-0 lg:p-6 min-h-[180px] sm:min-h-[220px] lg:min-h-[306px] transition">
+                    <img src="image\Vector (23).png" class="w-10 h-10 lg:w-20 lg:h-20 text-[#00335b] mb-2 lg:mb-6"
+                        fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <h3 class="text-[12px] lg:text-lg font-semibold SairaStencilOne text-center mb-1 lg:mb-3">Sustainable
+                        Energy<br>Efficiency</h3>
+                    <p class="text-gray-600 text-center text-[14px] SairaStencilOne lg:text-base">Boost energy saving with our eco-
+                        conscious, energy-efficient UPVC products.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore Our Journey Section -->
+    <section class="relative flex items-center justify-center min-h-[700px] overflow-hidden">
+        <!-- Background image -->
+        <img src="image/v750_634.png" alt="UPVC Windows"
+            class="absolute inset-0 w-full h-full opacity-90 z-0 object-cover" />
+        <!-- Overlay for better text visibility -->
+        <div class="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
+        <!-- Content -->
+        <div class="relative z-20 flex flex-col mb-10 items-center justify-center w-full h-full text-center px-4">
+            <!-- Play Icon -->
+            <div class="flex justify-center mb-2 sm:mb-4">
+                <img src="image/Frame 90.png" alt="Play" class="w-16 h-16 sm:w-24 sm:h-24" />
+            </div>
+            <h2 class="text-white text-[18px] sm:text-5xl  lg:text-5xl font-semibold  mb-2"
+                style="font-family: 'Dancing Script', cursive;">
+                Explore our journey
+            </h2>
+            <h3 class="text-white text-[13px] sm:text-2xl  lg:text-3xl font-bold mb-2 sm:mb-4">
+                Innovating Sustainable UPVC Solutions at DAYAL
+            </h3>
+            <p class="text-white text-[11px] sm:text-lg  lg:text-xl mb-1 sm:mb-2 font-medium">
+                Discover our commitment to sustainability and innovation with our eco-friendly UPVC profiles.<br>
+                Transform your spaces with our high-performance, low-maintenance products.
+            </p>
+            <button
+                class="mt-4 sm:mt-6 px-4 sm:px-10 py-2 sm:py-3 bg-white bg-opacity-80  text-gray-900 font-semibold rounded-full shadow hover:bg-opacity-100 transition text-xs sm:text-base">
+                Learn More
+            </button>
+        </div>
+    </section>
+
+    <!-- OUR UPVC SERVICES Section -->
+    <section class="relative w-100  px-4 py-12  bg-[#E1E1E1] overflow-hidden">
+        <!-- Top Gradient Background with Curved Shape as background image -->
+        <div class="hidden md:block absolute inset-0 z-0" style="background: linear-gradient(180deg, #00335B 0%, #328290 50.01%, #46B7CB 98.45%);
+              background-image: url('image/OUR UPVC SERVICES.png');
+              background-repeat: no-repeat;
+              background-position: top;
+              background-size: 100% auto;">
+        </div>
+
+        <!-- Mobile background (sm) -->
+        <img src="image/Frame 185.png" alt="Mobile Background"
+            class="block md:hidden absolute inset-0 w-full h-full object-cover z-0">
+        <!-- Content -->
+        <div class="relative max-w-7xl  mx-auto z-10">
+            <h2 class="text-white text-2xl lg:text-3xl SairaStencilOne  font-semibold  mb-2 pt-4 pl-2">OUR UPVC SERVICES</h2>
+            <h3 class="text-white text-xl lg:text-2xl SairaStencilOne font-bold mb-10 pl-2">Explore Our Range of UPVC Solutions</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 ">
+
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg flex bg-opacity-30 flex-col items-center p-2 sm:p-4 lg:p-8 min-h-[250px] lg:min-h-[600px] overflow-hidden transition hover:shadow-xl">
+                    <img src="image/v767_469.png" alt="UPVC Casement Windows"
+                        class="w-full h-40 sm:h-80 object-cover rounded-t-xl mb-2 sm:mb-4">
+                    <h4 class="text-[#00335b] text-base sm:text-lg font-bold mb-1 SairaStencilOne sm:mb-2 text-center">UPVC Casement
+                        Windows</h4>
+                    <p class="text-gray-700 SairaStencilOne text-center text-xs sm:text-sm">
+                        Sustainable, energy-efficient windows with modern design and enhanced security.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg flex flex-col bg-opacity-30 items-center p-2 sm:p-4 lg:p-8 min-h-[250px]  lg:min-h-[600px] overflow-hidden transition hover:shadow-xl">
+                    <img src="image/v767_468.png" alt="Tilt And Turn Windows"
+                        class="w-full h-40 sm:h-80 rounded-t-xl mb-2 sm:mb-4 border-none shadow-none">
+                    <h4 class="text-[#00335b] text-base sm:text-lg font-bold mb-1 SairaStencilOne sm:mb-2 text-center">Tilt And Turn
+                        Windows</h4>
+                    <p class="text-gray-700 text-center SairaStencilOne text-xs sm:text-sm">
+                        Versatile windows offering both tilt and turn functionalities for optimal ventilation and ease
+                        of use.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-xl shadow-lg flex flex-col items-center bg-opacity-30 p-2 sm:p-4 lg:p-8 min-h-[250px] lg:min-h-[600px] overflow-hidden transition hover:shadow-xl">
+                    <img src="image/v767_470.png" alt="UPVC Sliding Doors"
+                        class="w-full h-40 sm:h-80 object-cover rounded-t-xl mb-2 sm:mb-4">
+                    <h4 class="text-[#00335b] text-base sm:text-lg font-bold mb-1 SairaStencilOne sm:mb-2 text-center">UPVC Sliding
+                        Doors</h4>
+                    <p class="text-gray-700 text-center text-xs SairaStencilOne sm:text-sm">
+                        Space-saving, smooth-operating sliding doors designed for modern living.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section for UPVC Doors Showcase -->
+    <section class="relative w-full lg:py-16 py-0 bg-[#E1E1E1] overflow-hidden">
+        <!-- Decorative background curve image -->
+        <img src="image\Dayal Fabricator 1.png" alt="Background Curve"
+            class="hidden md:flex absolute left-0 bottom-0  w-full  pointer-events-none z-0" />
+        <img src="image\Frame 184.png" alt="Background Curve"
+            class="md:hidden flex absolute left-0 bottom-0  w-full  pointer-events-none z-0" />
+        <!-- Content -->
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
+            <h2 class="text-[#00335b] text-4xl font-bold SairaStencilOne mb-2">Dayal Fabricator</h2>
+            <h3 class=" text-3xl font-bold SairaStencilOne mb-12">Explore Our Range of UPVC Solutions</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex flex-col bg-opacity-80 pt-16 px-24  items-center overflow-hidden">
+                    <img src="image/v760_376.png" alt="UPVC Door 1" class="w-full md:h-[400px] h-[230px]">
+                    <h4 class="text-[#00335b] text-2xl font-bold mt-8 mb-2 SairaStencilOne text-center">Model- 51</h4>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex flex-col bg-opacity-80 pt-16 px-24 items-center overflow-hidden">
+                    <img src="image/v760_379.png" alt="UPVC Door 2" class="w-full md:h-[400px] h-[230px]">
+                    <h4 class="text-[#00335b] text-2xl font-bold mt-8 mb-2 SairaStencilOne text-center">Model- 52</h4>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex flex-col bg-opacity-80  pt-16 px-24   items-center overflow-hidden">
+                    <img src="image/v760_381.png" alt="UPVC Door 3" class="w-full md:h-[400px] h-[230px]">
+                    <h4 class="text-[#00335b] text-2xl font-bold mt-8 mb-2 SairaStencilOne text-center">Model- 53</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-100  px-4 py-12 bg-[#E1E1E1] overflow-hidden">
+        <!--  Gradient + Curve Background (matches reference) --"> -->
+        <img src="image/Dayal Fabricator 2.png" alt="Curve" class=" hidden md:flex inset-0 w-full h-full z-0"
+            style="position: absolute; left: 0; bottom: 0; width: 100%;  z-index: 1; pointer-events: none;" />
+             <img src="image\Frame 183.png" alt="Curve" class="md:hidden flex absolute inset-0 w-full h-full z-0"
+            style="position: absolute; left: 0; bottom: 0; width: 100%;  z-index: 1; pointer-events: none;" />
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto min-h-[900px] flex flex-col justify-center">
+            <h2 class="text-white text-2xl lg:text-3xl  font-semibold  mb-2 SairaStencilOne pt-4 pl-2">Dayal Fabricator</h2>
+            <h3 class="text-white text-xl lg:text-2xl font-bold mb-10 SairaStencilOne pl-2">Explore Our Range of Steel Doors</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-12 gap-3 lg:mt-48">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex flex-col bg-opacity-80 pt-12 px-24 items-center overflow-hidden min-h-[400px]">
+                    <img src="image/v760_417.png" alt="UPVC Door 1" class="w-full md:h-[400px] h-[230px]">
+                    <h4 class="text-[#00335b] text-2xl font-bold mt-8 SairaStencilOne mb-2 text-center">Model- 51</h4>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex flex-col bg-opacity-80 pt-12 px-24 items-center overflow-hidden min-h-[400px]">
+                    <img src="image/v760_418.png" alt="UPVC Door 2" class="w-full md:h-[400px] h-[230px]">
+                    <h4 class="text-[#00335b] text-2xl font-bold mt-8 mb-2 SairaStencilOne text-center">Model- 52</h4>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg flex flex-col bg-opacity-80 pt-12 px-24 items-center overflow-hidden min-h-[400px]">
+                    <img src="image/v760_422.png" alt="UPVC Door 3" class="w-full md:h-[400px] h-[230px]">
+                    <h4 class="text-[#00335b] text-2xl font-bold mt-8 mb-2 SairaStencilOne text-center">Model- 53</h4>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+<section class="relative w-100 min-h-screen md:min-h-[973px]">
+
+    <!-- Desktop background -->
+    <div class="hidden md:flex absolute inset-0 z-0"
+        style="background: url('image/our gallary.png') top center / 100% 100% no-repeat;">
+    </div>
+
+    <!-- Mobile background -->
+   <!-- Mobile background -->
+<div class="block md:hidden absolute inset-0 z-0"
+     style="background: url('image/Frame 182.png') center / 100% 100% no-repeat;">
+</div>
+
+
+    <!-- Section Title -->
+    <div class="flex justify-center items-center relative z-10">
+        <h2 class="text-[#054C73] text-4xl font-bold  mt-20 SairaStencilOne mb-2">OUR GALLERY</h2>
+    </div>
+
+    <!-- Gallery Images -->
+    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 mt-0 lg:mt-8 items-center justify-center px-4 py-12 mx-auto overflow-hidden"
+        style="max-width:1400px;">
+        <img src="image/v771_518.png" alt="Gallery 1"
+            class="rounded-lg w-full h-[323.96px] object-cover mx-auto" />
+        <img src="image/v773_646.png" alt="Gallery 2"
+            class="rounded-lg w-full h-[323.96px] object-cover mx-auto" />
+        <img src="image/v773_647.png" alt="Gallery 3"
+            class="rounded-lg w-full h-[323.96px] object-cover mx-auto" />
+        <img src="image/v773_648.png" alt="Gallery 4"
+            class="rounded-lg w-full h-[323.96px] object-cover mx-auto" />
+        <img src="image/v773_649.png" alt="Gallery 5"
+            class="rounded-lg w-full h-[323.96px] object-cover mx-auto" />
+        <img src="image/v773_650.png" alt="Gallery 6"
+            class="rounded-lg w-full h-[323.96px] object-cover mx-auto" />
+    </div>
+</section>
+
+    <section class="relative w-100  px-4 py-12 bg-[#E1E1E1] overflow-hidden">
+        <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+           <!-- Desktop background -->
+<div class="hidden md:block absolute inset-0 z-0"
+     style="background: url('image/3rd product.png') top right / cover no-repeat;">
+</div>
+
+<!-- Mobile background -->
+<div class="block md:hidden absolute inset-0 z-0"
+     style="background: url('image/Frame 181.png') center / 100% 100% no-repeat;">
+</div>
+
+        </div>
+        <section class="relative  overflow-hidden">
+
+            <div
+                class="max-w-6xl mx-auto mt-12 rounded-2xl shadow-lg overflow-hidden z-0 flex flex-col lg:flex-row bg-[#eaeaea]">
+                <!-- Left: Gradient background and content -->
+                <div class="lg:w-1/2 p-10 flex flex-col justify-center"
+                    style=" background: linear-gradient(-270deg, #46B7CB 0%, #328290 13.05%, #003566 99.23%);">
+                    <h2 class="text-white text-xl lg:text-2xl font-bold SairaStencilOne mb-2">WHY CHOOSE US</h2>
+                    <h3 class="text-white text-lg lg:text-xl SairaStencilOne  font-semibold mb-4">Why Choose Dayal Fabricator</h3>
+                    <p class="text-white SairaStencilOne text-justify text-sm mb-6">
+                        Dayal Fabricator specializes in manufacturing top-quality UPVC doors and windows that are
+                        designed
+                        to be durable, energy-efficient, and aesthetically pleasing. We aim to enhance every home or
+                        commercial space with eco-friendly solutions. Our UPVC doors and windows are made from
+                        superior-grade materials, ensuring durability, weather resistance, and long-lasting performance.
+                        They are designed to withstand tough environmental conditions while retaining their aesthetic
+                        appeal. We prioritize sustainability by offering products that help in reducing energy
+                        consumption.
+                        Our UPVC windows and doors involve minimal maintenance, keeping your spaces secure and insulated
+                        in
+                        the winter, and fresh during hot seasons.
+                    </p>
+                    <ul class="text-white text-sm SairaStencilOne list-disc pl-5 mb-6">
+                        <li>Superior Quality: Long-lasting and environmentally friendly UPVC products</li>
+                        <li>Modern Designs, Sleek and contemporary window and door solutions for every space</li>
+                        <li>Expert Installation: Professional service and support from our experienced team.</li>
+                    </ul>
+                    <button
+                        class=" text-white w-40 border border-white  SairaStencilOne px-6 py-2 rounded-full font-semibold shadow hover:bg-[#46B7CB] hover:text-white transition md:-right-[460px] -right-[170px] lg:-right-[245px] relative">Learn
+                        More</button>
+                </div>
+                <!-- Right: Image -->
+                <div class="">
+                    <img src="image\v780_679.png" alt="UPVC Window"
+                        class="w-[780.32px] lg:h-[654.96px]  h-[279px]  shadow-lg" />
+                </div>
+            </div>
+        </section>
+        </div>
+    </section>
+    <!-- New Section with Brand and Product Showcase -->
+
+    <section class="bg-[#E1E1E1] flex justify-center items-center py-8 lg:py-20"
+        style="background: url('image/brands.png') right/cover no-repeat;">
+
+        <div
+            class="max-w-6xl w-full flex flex-col lg:flex-row rounded-xl shadow-lg overflow-hidden z-10 bg-white bg-opacity-80">
+            <!-- Left: Image and Brand Info -->
+            <div class="w-full lg:w-1/2 flex flex-col items-center justify-center bg-[#012A59] p-8">
+                <img src="image/Rectangle 78.png" alt="UPVC Window" class="mb-6 object-contain" />
+                <div class="text-center">
+                    <div class="text-[#FFD600] text-3xl font-bold SairaStencilOne mb-1">GERMENTECH</div>
+                    <div class="text-white text-xs font-bold SairaStencilOne mb-2">UPVC WINDOWS</div>
+                    <div class="text-white text-xs SairaStencilOne font-bold mb-2">
+                        M. <span class="underline">+91-9814686271</span>, <span class="underline">+91-9814468271</span>
+                    </div>
+                    <div class="text-white text-xs SairaStencilOne font-bold mb-2">germentechupvcwindows.com</div>
+                    <div class="text-white text-xs font-bold SairaStencilOne leading-6">
+                        Tajpur road back side Barth box factory <br>
+                        near Hp Gass Agency Ludhiana punjab
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Gradient background and details -->
+            <div class="w-full lg:w-1/2 flex flex-col justify-center p-4 sm:p-6 lg:p-10 text-white"
+                style="background: linear-gradient(-270deg, #012A59 8.36%, #328290 89.53%, #46B7CB 99.67%);">
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 SairaStencilOne underline">Brands</h3>
+                <h4 class="text-[15px] sm:text-lg lg:text-xl font-bold mb-3 SairaStencilOne sm:mb-4">GERMENTECH UPVC WINDOW &amp; DOORS
+                </h4>
+                <p class="text-[12px] sm:text-base mb-3 sm:mb-4 SairaStencilOne leading-relaxed">
+                    At GERMENTECH, we redefine uPVC windows and doors with German precision and advanced technology.
+                    Our products ensure durability, energy efficiency, sound insulation, and low maintenance.
+                    Designed for modern homes and commercial spaces, they offer heat resistance, water-tight sealing,
+                    and eco-friendly sustainability—delivering long-term performance and peace of mind.
+                </p>
+                <ul class="text-[12px] sm:text-base mb-4 sm:mb-6 list-disc pl-4 sm:pl-5 space-y-2 leading-relaxed">
+                    <li class="font-medium SairaStencilOne font-[Montserrat]">
+                        <span class="font-normal">Efficiency</span><br> GERMENTECH uPVC windows and doors are designed
+                        to offer excellent thermal insulation, helping reduce energy consumption by maintaining
+                        consistent
+                        indoor temperatures. This leads to lower heating and cooling costs, making your spaces
+                        energy-efficient
+                        and eco-friendly.
+                    </li>
+                    <li class="font-medium font-[Montserrat]">
+                        <span class="font-bold SairaStencilOne">Durability </span><br> Our uPVC products are built to last.
+                        Resistant to corrosion, warping, and weathering, GERMENTECH windows and doors can withstand
+                        harsh environmental conditions, ensuring long-term durability with minimal maintenance.
+                    </li>
+                    <li class="font-medium SairaStencilOne font-[Montserrat]">
+                        <span class="font-bold SairaStencilOne">Sound </span><br> Enjoy peace and quiet with GERMENTECH uPVC windows
+                        and doors. The superior insulation properties of our products help significantly reduce external
+                        noise,
+                        creating a serene and comfortable indoor environment.
+                    </li>
+                </ul>
+                <button
+                    class=" px-4 sm:px-6 py-1.5 sm:py-2 rounded-full border-white border md:-right-[560px] -right-[300px] lg:-right-[345px] relative t-semibold shadow flex items-center gap-2 w-fit hover:bg-[#46B7CB] hover:text-white transition text-xs sm:text-base">
+                    <span class="text-white SairaStencilOne">Learn More</span>
+                </button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section class="relative flex flex-col lg:flex-row gap-8  px-8 py-12 min-h-screen overflow-hidden">
+
+
+        <img src="image/Advantages of Dayal Fabricator.png" alt="Advantages Background"
+            class="absolute inset-0 w-full h-full bg-[#E1E1E1] object-fill -z-10 hidden  md:flex" />
+
+        <img src="image\Frame 179.png" alt="Advantages Background"
+            class="absolute inset-0 w-full h-full object-fill -z-10 md:hidden  flex" />
+        <div class="max-w-7xl mx-auto flex pt-10 flex-col lg:flex-row gap-8 items-start relative ">
+
+
+            <div class="lg:w-1/2 w-full flex flex-col items-center text-center lg:items-start lg:text-left">
+                <h2 class="text-3xl !lg:text-4xl font-bold SairaStencilOne mb-2 inline-block SairaStencilOne">Advantages of Dayal
+                    Fabricator</h2>
+                <h3 class="text-xl lg:text-2xl font-semibold mb-2 SairaStencilOne">Transform Your Space with Dayal<br> Fabricator
+                    Solutions</h3>
+                <p class="text-gray-700 mb-6 lg:pr-20 SairaStencilOne">Experience the superior quality of Dayal Fabricator windows and
+                    doors. Enhance your comfort, security, and efficiency with our innovative and long- lasting
+                    solutions.</p>
+                <!-- Images -->
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center w-full relative -z-10">
+                    <img src="image/v814_336.png" alt="Window 1"
+                        class="rounded-tl-lg w-full sm:w-[250px] h-[180px] sm:h-[250px] object-cover shadow-xl mb-4 sm:mb-0" />
+                    <img src="image/v814_337.png" alt="Window 2"
+                        class="rounded-br-lg w-full sm:w-[250px] h-[180px] sm:h-[250px] object-cover shadow-xl" />
+                </div>
+            </div>
+
+            <!-- Right Side: Stats Cards -->
+            <div class="lg:w-1/2 w-full grid md:grid-cols-2 md:grid-rows-2 gap-8">
+
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-2 shadow-lg flex flex-col items-center justify-center h-[220px] rounded-tr-[48px]">
+                    <img src="image\Vector (20).png" class="w-14 h-14 text-[#003566] mb-2" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <div class="text-[#FFA415;] text-3xl font-bold SairaStencilOne">5000+</div>
+                    <div class="text-[#333] text-lg font-semibold SairaStencilOne">Windows installed</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-2 shadow-lg flex flex-col items-center justify-center h-[220px] rounded-tr-[48px]">
+                    <img src="image\Vector (21).png" class="w-14 h-14 text-[#003566] mb-2" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <div class="text-[#E53935] text-3xl font-bold SairaStencilOne">3000+</div>
+                    <div class="text-[#333] text-lg font-semibold SairaStencilOne">Doors installed</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white shadow-lg flex flex-col items-center justify-center h-[220px] rounded-bl-[48px]">
+                    <img src="image\Vector (22).png" class="w-14 h-14 text-[#003566] mb-2" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <div class="text-[#7C4DFF] text-3xl font-bold SairaStencilOne">99%</div>
+                    <div class="text-[#333] text-lg font-semibold SairaStencilOne">Enhanced Security</div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white shadow-lg flex flex-col items-center justify-center h-[220px] rounded-none">
+                    <img src="image\Vector (23).png" class="w-14 h-14 text-[#003566] mb-2" fill="none"
+                        stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+
+                    </img>
+                    <div class="text-[#43A047] text-3xl font-bold SairaStencilOne">45%</div>
+                    <div class="text-[#333] text-lg font-semibold SairaStencilOne">Energy Saving</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="relative testimonial-bg inset-0 w-full h-full z-0 pointer-events-none py-16 px-4">
+        <!-- Desktop background -->
+<div class="hidden md:block absolute inset-0 z-0"
+     style="background: url('image/OUR TESTIMONIALS.png') center / cover no-repeat;">
+</div>
+
+<!-- Mobile background -->
+<div class="block md:hidden absolute inset-0 z-0"
+     style="background: url('image/Frame 180.png') center / 100% 100% no-repeat;">
+</div>
+
+        
+
+        <div class="max-w-4xl mx-auto text-center relative z-10 pointer-events-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold  mb-2 SairaStencilOne">OUR TESTIMONIALS</h2>
+            <h3 class="text-2xl lg:text-3xl font-semibold mb-10 SairaStencilOne">What Client Say About Dayal Fabricator</h3>
+
+            <!-- Slider Wrapper -->
+            <div class="slider-wrapper">
+                <div id="testimonialSlider">
+                    <!-- Card 1 -->
+                    <div class="testimonial-slide">
+                        <div class="bg-white rounded-2xl shadow-lg flex flex-col sm:flex-row items-center p-4 sm:p-8 w-full"
+                            style="min-height: 220px;">
+                            <img src="image/teammember.jpg"
+                                class="w-20 h-20 sm:w-40 sm:h-40 rounded-full mb-4 sm:mb-0 sm:mr-10">
+                            <div class="flex-1 text-center sm:text-left">
+                                <h4 class="font-bold text-[32px] SairaStencilOne">Hannah Schmitt</h4>
+                                <p class="text-[16px] text-gray-700 SairaStencilOne">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna
+                                    eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id
+                                    augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse
+                                </p>
+                                <span class="text-gray-500 text-[14px] SairaStencilOne">May 8, 2020</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="testimonial-slide">
+                        <div class="bg-white rounded-2xl shadow-lg flex flex-col sm:flex-row items-center p-4 sm:p-8 w-full"
+                            style="min-height: 220px;">
+                            <img src="image/teammember.jpg"
+                                class="w-20 h-20 sm:w-40 sm:h-40 rounded-full mb-4 sm:mb-0 sm:mr-10">
+                            <div class="flex-1 text-center sm:text-left">
+                                <h4 class="font-bold text-[32px] SairaStencilOne">John Doe</h4>
+                                <p class="text-[16px] text-gray-700 SairaStencilOne">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna
+                                    eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id
+                                    augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse
+                                </p>
+                                <span class="text-gray-500 text-[14px] SairaStencilOne">July 12, 2021</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-slide">
+                        <div class="bg-white rounded-2xl shadow-lg flex flex-col sm:flex-row items-center p-4 sm:p-8 w-full"
+                            style="min-height: 220px;">
+                            <img src="image/teammember.jpg"
+                                class="w-24 h-24 sm:w-48 sm:h-48 rounded-full mb-4 sm:mb-0 sm:mr-10">
+                            <div class="flex-1 text-center sm:text-left">
+                                <h4 class="font-bold text-[32px] SairaStencilOne">Sophia Lee</h4>
+                                <p class="text-[16px] text-gray-700 SairaStencilOne">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna
+                                    eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id
+                                    augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse
+                                </p>
+                                <span class="text-gray-500 text-[14px] SairaStencilOne">Sept 23, 2022</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Dots & Arrows -->
+            <div class="flex justify-center items-center gap-4 mt-6 mb-12">
+                <i id="prevBtn" class="fas fa-chevron-left arrow-btn text-2xl text-[#24406F]"style="cursor: pointer;"></i>
+                <div id="dots" class="flex gap-2">
+                    <span class="dot w-3 h-3 rounded-full bg-[#054C73]"></span>
+                    <span class="dot w-3 h-3 rounded-full bg-gray-300"></span>
+                    <span class="dot w-3 h-3 rounded-full bg-gray-300"></span>
+                </div>
+                <i id="nextBtn" class="fas fa-chevron-right arrow-btn text-2xl text-[#24406F]"style="cursor: pointer;"></i>
+            </div>
+
+
+            <!-- Contact Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 max-w-7xl gap-8 mt-8">
+                <div class="bg-[#42AEC1] rounded-2xl flex flex-col items-center justify-center py-10 px-4 text-white">
+                    <span class="material-icons text-5xl mb-2 SairaStencilOne">email</span>
+                    <div class="text-xl font-semibold mb-1 SairaStencilOne">Email Now !</div>
+                    <div class="text-lg SairaStencilOne">Dayalupvcwindow@Gmail.Com</div>
+                </div>
+                <div class="bg-[#42AEC1] rounded-2xl flex flex-col items-center justify-center py-10 px-4 text-white">
+                    <span class="material-icons text-5xl mb-2 SairaStencilOne">call</span>
+                    <div class="text-xl font-semibold mb-1 SairaStencilOne">Get Started Now!</div>
+                    <div class="text-lg">
+                        <a href="tel:+919814868271" class="underline SairaStencilOne">+91-9814868271</a>,
+                        <a href="tel:+919814468271" class="underline SairaStencilOne">+91-9814468271</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    const slider = document.getElementById("testimonialSlider");
+    const slides = document.querySelectorAll(".testimonial-slide");
+    const dots = document.querySelectorAll(".dot");
+    const totalSlides = slides.length;
+
+    let currentIndex = 1; // start from first cloned slide
+    let autoSlide;
+
+    // Clone first and last slide for smooth infinite loop
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+
+    firstClone.id = "first-clone";
+    lastClone.id = "last-clone";
+
+    slider.appendChild(firstClone);
+    slider.insertBefore(lastClone, slides[0]);
+
+    const allSlides = document.querySelectorAll(".testimonial-slide");
+
+    const slideWidth = 100; // percent width
+    slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+
+    function updateDots(index) {
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("bg-[#054C73]", i === index);
+            dot.classList.toggle("bg-gray-300", i !== index);
+        });
+    }
+
+    function moveToSlide(index) {
+        slider.style.transition = "transform 1s ease-in-out";
+        slider.style.transform = `translateX(-${index * slideWidth}%)`;
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        if (currentIndex >= allSlides.length - 1) return;
+        currentIndex++;
+        moveToSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        if (currentIndex <= 0) return;
+        currentIndex--;
+        moveToSlide(currentIndex);
+    }
+
+    // Reset position when reaching clone
+    slider.addEventListener("transitionend", () => {
+        if (allSlides[currentIndex].id === "first-clone") {
+            slider.style.transition = "none";
+            currentIndex = 1;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        }
+        if (allSlides[currentIndex].id === "last-clone") {
+            slider.style.transition = "none";
+            currentIndex = totalSlides;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        }
+        updateDots((currentIndex - 1 + totalSlides) % totalSlides);
+    });
+
+    // Button controls
+    document.getElementById("nextBtn").addEventListener("click", () => {
+        nextSlide();
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+        prevSlide();
+    });
+
+    // Dot controls
+    dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+            moveToSlide(i + 1);
+        });
+    });
+
+    // Auto slide
+    function startAutoSlide() {
+        autoSlide = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    slider.addEventListener("mouseenter", stopAutoSlide);
+    slider.addEventListener("mouseleave", startAutoSlide);
+
+    startAutoSlide();
+</script>
+
+
+
+
+
+
+
+
+
+    <footer class="w-full px-4 py-10 overflow-x-hidden"
+        style="background: linear-gradient(180deg, #42AEC1 0%, #236A80 18.15%, #01355C 100%);">
+        <div class="max-w-7xl mx-auto flex flex-wrap gap-8 text-white">
+            <!-- Logo & About -->
+            <div class="flex flex-col items-start min-w-[220px] flex-1">
+                <div class="flex items-center mb-4">
+                    <img src="image\germantech_logo_no_bg.png" alt="GermanTech Logo" class="  mr-2">
+
+                </div>
+                <p class="text-sm leading-relaxed SairaStencilOne ">
+                    Founded in 2019, Dayal Fabricator is driven by a passionate team of engineers committed to
+                    delivering eco-friendly, sustainable solutions. Our focus lies in the development and manufacturing
+                    of high-quality uPVC profiles that meet European standards.
+                </p>
+            </div>
+            <!-- Vertical Divider (hide on small screens) -->
+            <div class="border-l border-white border-opacity-30 mx-4 hidden lg:block"></div>
+            <!-- Quick Links -->
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="font-bold text-lg mb-4 SairaStencilOne">Quick Links</h3>
+                <ul class="space-y-2 text-sm SairaStencilOne flex flex-col gap-2">
+                    <li><a href="./index.html" class="hover:underline">Home</a></li>
+                    <li><a href="./About-us.html" class="hover:underline">About us</a></li>
+                    <li><a href="./gallery.html" class="hover:underline">Gallery</a></li>
+                    <li><a href="./contact-us.html" class="hover:underline">Contact Us</a></li>
+                </ul>
+                <div class="mt-6">
+                    <select class="w-40 px-3 py-2 rounded shadow text-black SairaStencilOne">
+                        <option>Select language</option>
+                        <option>English</option>
+                        <option>Hindi</option>
+                        <option>Punjabi</option>
+                    </select>
+                    <div class="flex items-center mt-2 text-xs SairaStencilOne">
+                        <span>Powered By :</span>
+                        <img src="image\Vector (24).png" alt="Google Translate" class="w-5 h-5 ml-1">
+                    </div>
+                </div>
+            </div>
+            <!-- Dayal Fabricator Windows -->
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="font-bold text-lg mb-4 SairaStencilOne">Dayal Fabricator Windows</h3>
+                <ul class="space-y-2 text-sm SairaStencilOne flex flex-col gap-2">
+                    <li>UPVC Casement Windows</li>
+                    <li>Tilt And Turn Windows</li>
+                    <li>UPVC Sliding Doors</li>
+                    <li>UPVC Casement Doors</li>
+                    <li>Double Glazing Doors</li>
+                    <li>DAYAL Steel Doors</li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="font-bold text-lg sm:text-xl mb-4 SairaStencilOne">Contact Info</h3>
+                <ul class="space-y-4 text-xs sm:text-sm SairaStencilOne flex flex-col gap-2">
+                    <li class="flex items-start gap-2 sm:gap-4 opacity-100">
+                        <span class="material-icons text-xl sm:text-2xl align-middle">location_on</span>
+                        <span
+                            class="SairaStencilOne leading-snug w-full sm:w-48 whitespace-normal text-[11px] sm:text-sm">
+                            Tajpur road back side Barth box factory near Hp <br class="block sm:hidden">Gass Agency
+                            Ludhiana punjab
+                        </span>
+                    </li>
+                    <li class="flex  flex-row items-start sm:items-center gap-2 sm:gap-4">
+                        <span class="material-icons text-xl sm:text-2xl mr-0 sm:mr-2">call</span>
+                        <div class="flex flex-row ">
+                            <a href="tel:+919814868271"
+                                class="font-bold underline SairaStencilOne text-[12px] sm:text-sm">+91-9814686271</a>
+                            <span class="hidden sm:inline">,</span>
+                            <a href="tel:+919814468271"
+                                class="font-bold underline SairaStencilOne text-[12px] sm:text-sm">+91-9814468271</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2 sm:gap-4">
+                        <span class="material-icons text-xl sm:text-2xl mr-0 sm:mr-2">email</span>
+                        <a href="mailto:Dayalupvcwindow@gmail.com"
+                            class="SairaStencilOne text-[12px] sm:text-sm break-all">Dayalupvcwindow@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-xs text-white SairaStencilOne w-full">
+            © Copyright 2024-2025 by Dayal Fabricator. || Designed & Developed by <span
+                class="font-bold SairaStencilOne">WebEarl
+                Technologies</span>
+        </div>
+        <!-- Google Material Icons CDN -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </footer>
+
+</body>
+
+</html>

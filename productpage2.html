@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product2</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @media (min-width: 1024px) {
+            .laptop-width-441 {
+                width: 441px;
+            }
+
+        }
+        @media(min-height:800px){
+            .h-57256px{
+                height:532.56px;
+            }   
+        }
+
+         .slider-wrapper {
+                max-width: 95%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            #testimonialSlider {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            .testimonial-slide {
+                flex: 0 0 100%;
+                display: flex;
+                justify-content: center;
+            }
+             .menu-btn, .close-btn {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: black;
+    }
+
+ 
+       
+   .sidebar {
+      transform: translateX(100%);
+      transition: transform 0.4s ease-in-out;
+    }
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    /* Open button slide effect */
+    .menu-btn {
+      transition: transform 0.4s ease-in-out;
+    }
+    .menu-btn.move-left {
+      transform: translateX(-331px); /* Moves visibly to left */
+    }
+
+    /* Close button visibility */
+    .close-btn {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .close-btn.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+  
+
+.SairaStencilOne{
+           font-family:  Saira Stencil One;
+          
+        }
+        
+    </style>
+</head>
+
+<body class="bg-[#043357] min-h-screen overflow-x-hidden">
+
+  
+  <header>
+   <div class="bg-gray-900 text-white text-[9px] sm:text-xs lg:text-sm flex flex-col lg:flex-row lg:items-center lg:justify-between px-2 lg:px-4 py-2 gap-1 sm:gap-0">
+    <div class="flex items-center justify-between  mb-1 lg:mb-0">
+     <div>
+      <span class="text-orange-500">📞</span>
+      <span>+91-9814868271</span>
+      </div>
+      <div class="flex items-center space-x-2 mb-1 lg:mb-0">
+        <span class="text-orange-500">✉️</span>
+        <span>Dayalupvcwindow@gmail.com</span>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Navbar -->
+  <nav class="left-0 w-full bg-white shadow flex justify-between items-center px-6 py-3 z-50">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img src="image/germantech_logo_no_bg.png" alt="GermanTech Logo" class="w-24 sm:w-36 lg:w-48">
+    </div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden lg:flex items-center space-x-6 font-semibold text-gray-800">
+      <li><a href="/index.html" class="hover:text-blue-600">HOME</a></li>
+      <li><a href="/About-us.html" class="hover:text-blue-600">ABOUT US</a></li>
+      <li><a href="/productpage1.html" class="hover:text-blue-600">OUR PRODUCT</a></li>
+      <li><a href="/gallery.html" class="hover:text-blue-600">GALLERY</a></li>
+      <li><a href="/contact-us.html" class="hover:text-blue-600">CONTACT US</a></li>
+    </ul>
+     <!-- Mobile Menu Button -->
+      <div class="lg:hidden flex items-center">
+  <button id="mobile-menu-btn" class="flex flex-col space-y-1 focus:outline-none">
+    <span class="w-6 h-0.5 bg-black"></span>
+    <span class="w-6 h-0.5 bg-black"></span>
+    <span class="w-6 h-0.5 bg-black"></span>
+  </button>
+</div>
+    <!-- Sidebar Open Button -->
+    <button id="openBtn" class="text-3xl lg:flex hidden focus:outline-none">&#9776;</button>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar"
+       class="fixed top-0 right-[-400px]    w-[300px] sm:w-[400px] h-full bg-white shadow-2xl z-50 transition-all duration-500 ease-in-out p-6">
+    <button id="closeBtn" class="absolute top-3 right-3 text-3xl font-bold">&times;</button>
+
+    <p class="text-gray-700 mb-4 mt-14  pl-[10px] pr-[40px]">
+      At Dayal Fabricator, we are dedicated to providing exceptional quality and innovative solutions for all your uPVC door and window needs.
+    </p>
+     
+    <h3 class="font-semibold text-xl mb-2  pl-[10px] mt-16">Contact Info:</h3>
+    <div class="pl-[14px] text-[#0000000]">
+      <p class="flex flex-row gap-3 items-center SairaStencilOne pr-12"> <img src="image\Vector (28).png"> Tajpur road back side Barth box <br> factory near Hp Gass<br> Agency Ludhiana Punjab</p>
+      <p class="flex flex-row gap-3 mt-10 "> <img src="image\Vector (27).png"><a href="mailto:Dayalupvcwindow@gmail.com" class="text-[#0000000] underline">Dayalupvcwindow@gmail.com</a></p>
+      <p class="flex flex-row gap-3 mt-10 "><img src="image\Vector (29).png"><span class="underline"> +91-9814868271, +91-84468271</span></p>
+    </div>
+
+    <div class="flex mt-8 pl-4 gap-3">
+      <a href="#"><img src="image\image 6 (2).png"  alt=""></a>
+      <a href="#"><img src="image\image 7.png"  alt=""></a>
+      <a href="#"><img src="image\image 8.png"  alt=""></a>
+    </div>
+
+    <h3 class="font-semibold text-xl pl-4 mt-6 mb-2">Newsletter:</h3>
+    <div class="flex pl-4">
+      <input type="email" placeholder="Email Address" class="flex  text-[ #7E7474] bg-[#D9D9D9] rounded-l-md px-3 py-2 focus:outline-none">
+      <button class="bg-[#D9D9D9] text-[ #7E7474] px-4 rounded-r-md "><img src="image\Vector (30).png"></button>
+    </div>
+  </div>
+</header>
+
+<script>
+  const sidebar = document.getElementById("sidebar");
+  const openBtn = document.getElementById("openBtn");
+  const closeBtn = document.getElementById("closeBtn");
+
+  openBtn.addEventListener("click", () => {
+    sidebar.style.right = "0";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.style.right = "-400px";
+  });
+</script>
+      <!-- Mobile Menu (hidden by default, shown on button click) -->
+    <div id="mobile-menu" class="lg:hidden bg-white shadow-lg w-full absolute left-0 top-16 z-50 hidden">
+        <ul
+            class="flex flex-col items-start px-6 py-4 gap-2 text-[11px] font-semibold rounded-l-xl shadow-xl w-64 absolute right-1 top-[26px] bg-white">
+            <li><a href="index.html" class="text-black ">HOME</a></li>
+            <li><a href="About-us.html" class="text-black">ABOUT US</a></li>
+            <li><a href="productpage1.html" class="text-black border-b-2 border-black">POR PRODUCT</a></li>
+            
+            <li><a href="gallery.html" class="text-black">GALLERY</a></li>
+            <li><a href="contact-us.html" class="text-black">CONTACT US</a></li>
+        </ul>
+    </div>
+    <script>
+        // Simple mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (menuBtn && menu) {
+            menuBtn.addEventListener('click', function () {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+    
+    <!-- Main Content -->
+    <div
+        class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(240vh-415px)]  md:min-h-[calc(163vh-415px)] pt-10 pb-16 relative bg-cover bg-center bg-no-repeat"
+        style="background-image: url('image/1stproduct.png');">
+
+       
+
+        <!-- Content Wrapper -->
+        <div
+            class="flex flex-col lg:flex-row items-center justify-center mt-8 lg:mt-12 mb-12 lg:mb-32 gap-8 lg:gap-12 z-10 w-full max-w-[1512px]">
+
+            <!-- Left Card -->
+            <div class="z-10 flex flex-col items-start justify-start px-6 py-2 lg:px-8 lg:py-12 rounded-xl shadow-lg bg-black bg-opacity-30 h-auto lg:h-[557px]"
+                style="width:100%; max-width:333px;">
+
+                <!-- Mobile Dropdown -->
+                <div class="w-full block lg:hidden">
+                    <button id="dropdownBtn"
+                        class="text-white text-xl w-full block font-bold py-1 rounded-md flex justify-between items-center">
+                        Categories
+                        <span id="arrow" class="ml-2">▼</span>
+                    </button>
+
+                    <ul id="dropdownMenu"
+                        class="max-h-0 overflow-hidden transition-all duration-300  text-white text-sm font-medium space-y-2   rounded-md  w-full">
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">windows and Door</a></li>
+                        <li><a href="productpage2.html" class="block hover:text-[#42AEC1 text-sm]">Allumum window and Door</a></li>
+                        <li><a href="productpage3.html" class="block hover:text-[#42AEC1 text-sm]">wpc door and wall panel</a></li>
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">UPVC Casement Doors</a></li>
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">Double Glazing Doors</a></li>
+                        <li><a href="productpage1.html" class="block hover:text-[#42AEC1 text-sm]">DAYAL Steel Doors</a></li>
+                    </ul>
+                </div>
+
+                <!-- Desktop list -->
+                <ul class="hidden lg:block text-white text-sm lg:text-base font-medium space-y-4 lg:space-y-6">
+                    <li><a href="productpage1.html">windows and Door</a></li>
+                    <li><a href="productpage2.html">Allumum window and Door</a></li>
+                    <li><a href="productpage3.html">wpc door and wall panel</a></li>
+                    <li><a href="productpage1.html">UPVC Casement Doors</a></li>
+                    <li><a href="productpage1.html">Double Glazing Doors</a></li>
+                    <li><a href="productpage1.html">DAYAL Steel Doors</a></li>
+                </ul>
+            </div>
+
+            <script>
+                const dropdownBtn = document.getElementById("dropdownBtn");
+                const dropdownMenu = document.getElementById("dropdownMenu");
+                const arrow = document.getElementById("arrow");
+
+                dropdownBtn.addEventListener("click", () => {
+                    if (dropdownMenu.classList.contains("max-h-0")) {
+                        dropdownMenu.classList.remove("max-h-0");
+                        dropdownMenu.classList.add("max-h-96"); // Adjust max height as needed
+                        arrow.textContent = "▲";
+                    } else {
+                        dropdownMenu.classList.add("max-h-0");
+                        dropdownMenu.classList.remove("max-h-96");
+                        arrow.textContent = "▼";
+                    }
+                });
+            </script>
+
+           <div class="max-w-5xl w-full text-white relative overflow-hidden flex flex-col lg:flex-row h-[821.56px;] lg:h-[555.56px]"
+                style="background: #00335B; border-top-right-radius:110px; border-bottom-left-radius:110px">
+                <!-- Left Side Image -->
+                <div class="flex items-center justify-center overflow-hidden lg:w-[550.88px] lg:h-[555.56px] ">
+                    <img src="image/Rectangle 2283 (2).png" alt="UPVC Door"
+                        class=" w-full h-full ">
+                </div>
+                <!-- Content Right Side -->
+                <div class="flex flex-col flex-1 px-8 py-8 justify-start items-start lg:w-[441px]" style="height:621.56px;">
+					<h4 class="text-white SairaStencilOne font-semibold text-[18px] mb-2" style="width:267px; height:33px;">Allumum window and Door</h4>
+					<h2 class="text-white SairaStencilOne font-bold text-[28px] leading-[1] mb-4" style="font-weight:400; font-size:28px; line-height:1; letter-spacing:0; vertical-align:middle; width:441px; height:102px; opacity:1;">
+						Enhance Your Space with <br> Our Premium UPVC <br>Casement Door Services
+					</h2>
+					<p class="text-[#B2E6F6] SairaStencilOne font-medium text-[16px] leading-[1] text-justify align-middle mt-2">
+						At Dayal Fabricator, we specialize in providing top-quality UPVC Casement Door solutions designed to enhance the aesthetics and functionality of your space. Our UPVC Casement Doors offer exceptional durability, energy efficiency, and modern design, making them a perfect choice for both residential and commercial properties. <br>
+					
+						Our UPVC Casement Doors are available in a variety of styles and finishes, customized to meet your specific needs. Whether you're looking to improve insulation, security, or simply update the look of your property, our expert team ensures professional installation and outstanding service. Choose our UPVC Casement Door services for a long-lasting, low-maintenance solution that combines style with performance.
+					</p>
+				</div>
+			</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full px-4 py-10 overflow-x-hidden"
+        style="background: linear-gradient(180deg, #42AEC1 0%, #236A80 18.15%, #01355C 100%);">
+        <div class="max-w-7xl mx-auto flex flex-wrap gap-8 text-white">
+            <!-- Logo & About -->
+            <div class="flex flex-col items-start min-w-[220px] flex-1">
+                <div class="flex items-center mb-4">
+                    <img src="image\germantech_logo_no_bg.png" alt="GermanTech Logo" class="  mr-2">
+
+                </div>
+                <p class="text-sm leading-relaxed SairaStencilOne">
+                    Founded in 2019, Dayal Fabricator is driven by a passionate team of engineers committed to
+                    delivering eco-friendly, sustainable solutions. Our focus lies in the development and manufacturing
+                    of high-quality uPVC profiles that meet European standards.
+                </p>
+            </div>
+            <!-- Vertical Divider (hide on small screens) -->
+            <div class="border-l border-white border-opacity-30 mx-4 hidden lg:block"></div>
+            <!-- Quick Links -->
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="font-bold text-lg mb-4 SairaStencilOne">Quick Links</h3>
+                <ul class="space-y-2 text-sm SairaStencilOne flex flex-col gap-2">
+                    <li><a href="./index.html" class="hover:underline">Home</a></li>
+                    <li><a href="./About-us.html" class="hover:underline">About us</a></li>
+                    <li><a href="./gallery.html" class="hover:underline">Gallery</a></li>
+                  
+                    <li><a href="./contact-us.html" class="hover:underline">Contact Us</a></li>
+                </ul>
+                <div class="mt-6">
+                    <select class="w-40 px-3 py-2 rounded shadow text-black SairaStencilOne">
+                        <option>Select language</option>
+                        <option>English</option>
+                        <option>Hindi</option>
+                        <option>Punjabi</option>
+                    </select>
+                    <div class="flex items-center mt-2 text-xs SairaStencilOne">
+                        <span>Powered By :</span>
+                        <img src="image\Vector (24).png" alt="Google Translate" class="w-5 h-5 ml-1">
+                    </div>
+                </div>
+            </div>
+            <!-- Dayal Fabricator Windows -->
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="font-bold text-lg mb-4 SairaStencilOne">Dayal Fabricator Windows</h3>
+                <ul class="space-y-2 text-sm SairaStencilOne flex flex-col gap-2">
+                    <li>UPVC Casement Windows</li>
+                    <li>Tilt And Turn Windows</li>
+                    <li>UPVC Sliding Doors</li>
+                    <li>UPVC Casement Doors</li>
+                    <li>Double Glazing Doors</li>
+                    <li>DAYAL Steel Doors</li>
+                </ul>
+            </div>
+            <!-- Contact Info -->
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="font-bold text-lg sm:text-xl mb-4 SairaStencilOne">Contact Info</h3>
+                <ul class="space-y-4 text-xs sm:text-sm SairaStencilOne flex flex-col gap-2">
+                    <li class="flex items-start gap-2 sm:gap-4 opacity-100">
+                        <span class="material-icons text-xl sm:text-2xl align-middle">location_on</span>
+                        <span
+                            class="SairaStencilOne leading-snug w-full sm:w-48 whitespace-normal text-[11px] sm:text-sm">
+                            Tajpur road back side Barth box factory near Hp <br class="block sm:hidden">Gass Agency
+                            Ludhiana punjab
+                        </span>
+                    </li>
+                    <li class="flex  flex-row items-start sm:items-center gap-2 sm:gap-4">
+                        <span class="material-icons text-xl sm:text-2xl mr-0 sm:mr-2">call</span>
+                        <div class="flex flex-row ">
+                            <a href="tel:+919814868271"
+                                class="font-bold underline SairaStencilOne text-[12px] sm:text-sm">+91-9814686271</a>
+                            <span class="hidden sm:inline">,</span>
+                            <a href="tel:+919814468271"
+                                class="font-bold underline SairaStencilOne text-[12px] sm:text-sm">+91-9814468271</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-2 sm:gap-4">
+                        <span class="material-icons text-xl sm:text-2xl mr-0 sm:mr-2">email</span>
+                        <a href="mailto:Dayalupvcwindow@gmail.com"
+                            class="SairaStencilOne text-[12px] sm:text-sm break-all">Dayalupvcwindow@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="border-t border-white border-opacity-20 mt-10 pt-6 text-center text-xs text-white SairaStencilOne w-full">
+            © Copyright 2024-2025 by Dayal Fabricator. || Designed & Developed by <span
+                class="font-bold SairaStencilOne">WebEarl
+                Technologies</span>
+        </div>
+        <!-- Google Material Icons CDN -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </footer>
+
+
+    <!-- Google Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</body>
+
+</html>
