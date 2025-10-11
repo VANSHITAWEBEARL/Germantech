@@ -1,0 +1,109 @@
+  /* index css */
+    /* fonts */
+    .font-lato { font-family: 'Lato', sans-serif; }
+    .SairaStencilOne { font-family: 'Saira Stencil One'; }
+
+    /* responsive hex image sizes */
+    @media (max-width: 1023px) { .hex-img { width: 12rem !important; } }
+    @media (min-width: 1024px) { .hex-img { width: 23rem !important; } }
+
+    /* slider */
+    .slider-wrapper { max-width: 95%; margin: 0 auto; overflow: hidden; }
+    #testimonialSlider { display: flex; transition: transform 0.5s ease-in-out; }
+    .testimonial-slide { flex: 0 0 100%; display: flex; justify-content: center; }
+
+    /* menu / sidebar */
+    .menu-btn, .close-btn { font-size: 24px; cursor: pointer; background: none; border: none; color: black; }
+    .sidebar { transform: translateX(100%); transition: transform 0.4s ease-in-out; }
+    .sidebar.open { transform: translateX(0); }
+    .menu-btn { transition: transform 0.4s ease-in-out; }
+    .menu-btn.move-left { transform: translateX(-331px); }
+    .close-btn { opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+    .close-btn.show { opacity: 1; pointer-events: all; }
+
+    /* Background images moved from inline -> internal */
+    .hero-bg {
+      background-image: url('image/Rectangle63.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .home-bg {
+      background-image: url('image/home1bg.jpg');
+      background-size: cover;
+      background-position: 5% center;
+      clip-path: polygon(23% 0%, 100% 0%, 100% 100%, 75% 100%, 23% 100%, 0% 50%);
+      z-index: 1;
+    }
+
+    .our-upvc-services-desktop {
+      background: linear-gradient(180deg, #00335B 0%, #328290 50.01%, #46B7CB 98.45%);
+      background-image: url('image/OUR UPVC SERVICES.png');
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: 100% auto;
+    }
+
+    .third-product-desktop {
+      background-image: url('image/3rd product.png');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .third-product-mobile {
+      background-image: url('image/Frame 181.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .third-product-contain {background: linear-gradient(-270deg, #46B7CB 0%, #328290 13.05%, #003566 99.23%)}
+
+    .brands-bg {
+      background-image: url('image/brands.png');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .brands-gradient {
+      background: linear-gradient(-270deg, #012A59 8.36%, #328290 89.53%, #46B7CB 99.67%);
+    }
+
+    .about-right-gradient {
+      background: linear-gradient(-270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%);
+    }
+
+    .gallery-desktop { background-image: url('image/our gallary.png'); background-position: top center; background-repeat: no-repeat; background-size: 100% 100%; }
+    .gallery-mobile { background-image: url('image/Frame 182.png'); background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
+
+    .testimonial-desktop { background-image: url('image/OUR TESTIMONIALS.png'); background-size: cover; background-position: center; background-repeat: no-repeat; }
+    .testimonial-mobile { background-image: url('image/Frame 180.png'); background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
+    .gallary-image {max-width:1400px;}
+    .swipper{min-height: 220px;}
+    .cursor{}
+    /* small helpers */
+    .max-w-1400 { max-width: 1400px; }
+    .min-h-973 { min-height: 973px; }
+
+    /* image utility if explicit inline sizes were used */
+    .img-large { width: 780px; max-width: 100%; height: auto; }
+    
+    .GermanTecFabricator1{ position: absolute; left: 0; bottom: 0; width: 100%;  z-index: 1; pointer-events: none;}
+    .GermanTecFabricator2{position: absolute; left: 0; bottom: 0; width: 100%;  z-index: 1; pointer-events: none;}
+
+     .aboutrightside {background: linear-gradient(270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%);}
+     .Exploreourjourney  {font-family: 'Dancing Script', cursive; } 
+
+      .AtGERMENTECH {background: linear-gradient(-270deg, #012A59 8.36%, #328290 89.53%, #46B7CB 99.67%);}
+
+
+
+
+
+
+
+
+     /* footer */
+     .footer{background: linear-gradient(180deg, #42AEC1 0%, #236A80 18.15%, #01355C 100%);}
+     
