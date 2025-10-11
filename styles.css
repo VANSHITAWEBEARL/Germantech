@@ -104,14 +104,79 @@
 
 .aboutus{background: url('image/about us page about us.png') left top/100% 900px no-repeat;}
 .aboutuscontain{background: linear-gradient(270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%); min-width: 0;}
-.abouteimg {background-image: url('./image/OUR VISION  AND  MISSION.png') ; background-size:100% 100%;}
 
+ 
 @media (max-width: 340px) {
-  section {
+  .section1 {
     background-image: url('./image/Frame 188.png') !important;
     background-size: cover;
   }
 }
+@media (max-width: 640px) {
+            section.process-bg {
+                background: url('image/Frame 187.png') center top/cover no-repeat !important;
+            }
+        }
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            .main-wrapper {
+                width: 1200px !important;
+                margin: 0 auto !important;
+                min-width: 1200px !important;
+                max-width: 1200px !important;
+            }
+        }
+        @media (max-width: 1023px) {
+            .process-bg {
+                background-size: 230% !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            .process-bg {
+                background-size: 180% !important;
+            }
+        }
+ @media (min-width: 320px) {
+            .process-bg {
+              background: 100% 100%;
+            }
+        }
+
+         .sidebar {
+      transform: translateX(100%);
+      transition: transform 0.4s ease-in-out;
+    }
+    .sidebar.open {
+      transform: translateX(0);
+    }
+.SairaStencilOne{
+           font-family:  Saira Stencil One;
+          
+        }
+    /* Open button slide effect */
+    .menu-btn {
+      transition: transform 0.4s ease-in-out;
+    }
+    .menu-btn.move-left {
+      transform: translateX(-331px); /* Moves visibly to left */
+    }
+
+    /* Close button visibility */
+    .close-btn {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .close-btn.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+     @media (max-width: 640px) {
+            div[style*="about us page about us.png"] {
+                background: url('image/Frame 189.png') center top/cover no-repeat !important;
+            }
+        }
+
      /* footer */
      .footer{background: linear-gradient(180deg, #42AEC1 0%, #236A80 18.15%, #01355C 100%);}
      
