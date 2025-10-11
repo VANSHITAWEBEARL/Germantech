@@ -100,10 +100,18 @@
 
 
 
+/* about us page */
 
+.aboutus{background: url('image/about us page about us.png') left top/100% 900px no-repeat;}
+.aboutuscontain{background: linear-gradient(270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%); min-width: 0;}
+.abouteimg {background-image: url('./image/OUR VISION  AND  MISSION.png') ; background-size:100% 100%;}
 
-
-
+@media (max-width: 340px) {
+  section {
+    background-image: url('./image/Frame 188.png') !important;
+    background-size: cover;
+  }
+}
      /* footer */
      .footer{background: linear-gradient(180deg, #42AEC1 0%, #236A80 18.15%, #01355C 100%);}
      
