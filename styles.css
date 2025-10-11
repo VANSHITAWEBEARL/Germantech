@@ -81,7 +81,7 @@
     .testimonial-mobile { background-image: url('image/Frame 180.png'); background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
     .gallary-image {max-width:1400px;}
     .swipper{min-height: 220px;}
-    .cursor{}
+    
     /* small helpers */
     .max-w-1400 { max-width: 1400px; }
     .min-h-973 { min-height: 973px; }
