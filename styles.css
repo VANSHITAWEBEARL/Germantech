@@ -74,7 +74,7 @@
       background: linear-gradient(-270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%);
     }
 
-    .gallery-desktop { background-image: url('image/our gallary.png'); background-position: top center; background-repeat: no-repeat; background-size: 100% 100%; }
+    .gallery-desktop { background-image: url('image/ourgallary.png'); background-position: top center; background-repeat: no-repeat; background-size: 100% 100%; }
     .gallery-mobile { background-image: url('image/Frame 182.png'); background-position: center; background-repeat: no-repeat; background-size: 100% 100%; }
 
     .testimonial-desktop { background-image: url('image/OUR TESTIMONIALS.png'); background-size: cover; background-position: center; background-repeat: no-repeat; }
