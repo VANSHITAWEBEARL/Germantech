@@ -21,31 +21,63 @@
 </script>
 
 <script>
-  // Contact form submission
   document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector("form"); // તારા form નો selector
+    const form = document.querySelector("form");
 
+    // ✅ Toast container create (once)
+    const toastContainer = document.createElement("div");
+    toastContainer.className =
+      "fixed bottom-5 right-5 z-[9999] flex flex-col items-end space-y-2";
+    document.body.appendChild(toastContainer);
+
+    // ✅ Function to show toast
+    function showToast(message, type = "success") {
+      const toast = document.createElement("div");
+      toast.className = `
+        px-4 py-3 rounded-lg shadow-lg text-green-400 text-sm font-semibold
+        animate-fadeIn
+        ${type === "success" ? "bg-white" : "bg-white , text-red-400"}
+      `;
+      toast.textContent = message;
+
+      toastContainer.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-x-3");
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    // ✅ Add animation CSS dynamically
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.4s ease-out;
+      }
+    `;
+    document.head.appendChild(style);
+
+    // ✅ Send email
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      // Send email via EmailJS
-      emailjs.sendForm(
-        "service_p6mk3dq",   // 👈 EmailJS Service ID
-        "template_04sigjp",  // 👈 Template ID
-        form
-      ).then(
-        function() {
-          alert("✅ Your message has been sent successfully!");
+      emailjs.sendForm("service_p6mk3dq", "template_04sigjp", form)
+        .then(() => {
+          showToast("✅ Form Submitted Successfully!");
           form.reset();
-        },
-        function(error) {
-          alert("❌ Failed to send message. Try again later.");
+        })
+        .catch((error) => {
           console.error("EmailJS error:", error);
-        }
-      );
+          showToast("❌ Failed to send message. Try again later.", "error");
+        });
     });
   });
 </script>
+
 
 <body class="bg-[#043357] min-h-screen">
   <!-- Top Contact Bar -->
