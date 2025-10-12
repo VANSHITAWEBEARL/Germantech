@@ -106,12 +106,8 @@
 .aboutuscontain{background: linear-gradient(270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%); min-width: 0;}
 
  
-@media (max-width: 340px) {
-  .section1 {
-    background-image: url('./image/Frame 188.png') !important;
-    background-size: cover;
-  }
-}
+
+
 @media (max-width: 640px) {
             section.process-bg {
                 background: url('image/Frame 187.png') center top/cover no-repeat !important;
