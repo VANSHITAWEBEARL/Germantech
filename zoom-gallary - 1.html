@@ -10,57 +10,7 @@
   <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #eaf6fb 60%, #1a5276 100%);
-      min-height: 100vh;
-      position: relative;
-    }
-    .gallery-image {
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(26,82,118,0.25);
-      border: 4px solid #1a5276;
-      
-    }
-     .position{
-        background-size: 100% 100%;
-    }
-      .sidebar {
-      transform: translateX(100%);
-      transition: transform 0.4s ease-in-out;
-    }
-    .sidebar.open {
-      transform: translateX(0);
-    }
-
-    /* Open button slide effect */
-    .menu-btn {
-      transition: transform 0.4s ease-in-out;
-    }
-    .menu-btn.move-left {
-      transform: translateX(-331px); /* Moves visibly to left */
-    }
-
-    /* Close button visibility */
-    .close-btn {
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
-    }
-    .close-btn.show {
-      opacity: 1;
-      pointer-events: all;
-    }
-  
-.SairaStencilOne{
-           font-family:  Saira Stencil One;
-          
-        }
-
-
-  </style>
+ 
 </head>
 <body class="bg-[#043357] min-h-screen">
 
@@ -187,8 +137,7 @@
     </script>
 
   <!-- Gallery Section -->
-  <section class="py-10 pb-16  min-h-[100%] position bg-center" 
-    style="background-image: url('./image/our gallary.png');">
+  <section class="py-10 pb-16  min-h-[100%] position  bg-center  bg-[url('./image/ourgallary.png')]">
     <h2 class="text-center text-[#145da0] text-3xl sm:text-4xl font-bold mb-8 tracking-wide SairaStencilOne">OUR GALLERY</h2>
 
     <div class="bg-white rounded-xl overflow-hidden shadow-lg flex items-center justify-center max-w-2xl mx-auto">

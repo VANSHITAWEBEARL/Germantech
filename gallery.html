@@ -11,82 +11,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<style>
-        .font-lato {
-            font-family: 'Lato', sans-serif;
-        }
-       
-        @media (max-width: 640px) {
-    .gallery-bg {
-      background-image: url('./image/Frame 192.png') !important;
-      background-size: 100% 100%;
-      background-position: center;
 
-       .slider-wrapper {
-                max-width: 95%;
-                margin: 0 auto;
-                overflow: hidden;
-            }
-
-            #testimonialSlider {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-            }
-
-            .testimonial-slide {
-                flex: 0 0 100%;
-                display: flex;
-                justify-content: center;
-            }
-             .menu-btn, .close-btn {
-      font-size: 24px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      color: black;
-    }
-
- 
-       
-   .sidebar {
-      transform: translateX(100%);
-      transition: transform 0.4s ease-in-out;
-    }
-    .sidebar.open {
-      transform: translateX(0);
-    }
-
-    /* Open button slide effect */
-    .menu-btn {
-      transition: transform 0.4s ease-in-out;
-    }
-    .menu-btn.move-left {
-      transform: translateX(-331px); /* Moves visibly to left */
-    }
-
-    /* Close button visibility */
-    .close-btn {
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease;
-    }
-    .close-btn.show {
-      opacity: 1;
-      pointer-events: all;
-    }
-  
-
-
-    }
-  }
-  .SairaStencilOne{
-           font-family:  Saira Stencil One;
-          
-        }
-    </style>
 </head>
-<body class="min-h-screen bg-cover lg:bg-contain bg-center bg-no-repeat " 
-      style="background-image: url('./image/our gallary page.png');">  <!-- Top Contact Bar -->
+<body class="min-h-screen bg-cover lg:bg-contain bg-center bg-no-repeat bg-[url('./image/ourgallarypage.png')] " 
+      >  <!-- Top Contact Bar -->
    <header>
   <!-- Top Contact Bar -->
    <div class="bg-gray-900 text-white text-[9px] sm:text-xs lg:text-sm flex flex-col lg:flex-row lg:items-center lg:justify-between px-2 lg:px-4 py-2 gap-1 sm:gap-0">
@@ -220,7 +148,7 @@
 
 		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-6xl mb-[40px] mx-auto">
                 <a href="./zoom-gallary - 1.html">
-				<div class="bg-white rounded-tl-xl  overflow-hidden shadow-lg flex items-center justify-center" style="width: 434.095703125;height: 323.9609375;">
+				<div class="bg-white rounded-tl-xl  overflow-hidden shadow-lg flex items-center justify-center w-[434.095703125] h-[323.9609375]" >
 					<img src="./image/v771_518.png" alt="Gallery 1" class="w-full h-full object-[100% 100%] hover:scale-x-125 hover:scale-y-125 transition  duration-[1s,15s] transform-3d ease-in-out " />
 				</div>
                 </a>
