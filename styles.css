@@ -106,7 +106,17 @@
 .aboutuscontain{background: linear-gradient(270deg, #46B7CB 0%, #328290 15.5%, #00335B 97.41%); min-width: 0;}
 
  
+    /* Default (Desktop / Tablet) */
+            .bg-change {
+                background-image: url('image/1stproduct.png');
+            }
 
+            /* Mobile (max-width: 640px) */
+            @media (max-width: 640px) {
+                .bg-change {
+                    background-image: url('image/1st-product.png') !important;
+                }
+            }
 
 @media (max-width: 640px) {
             section.process-bg {

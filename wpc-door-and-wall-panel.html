@@ -213,22 +213,10 @@
 
     
  <div
-        class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(240vh-415px)]  md:min-h-[calc(163vh-415px)] pt-10 relative bg-cover bg-center bg-no-repeat bg-change">
+        class="flex flex-col lg:flex-row items-center justify-center min-h-[calc(240vh-415px)]  md:min-h-[calc(163vh-415px)] relative bg-cover bg-center bg-no-repeat bg-change">
 
 
-        <style>
-            /* Default (Desktop / Tablet) */
-            .bg-change {
-                background-image: url('image/1stproduct.png');
-            }
-
-            /* Mobile (max-width: 640px) */
-            @media (max-width: 640px) {
-                .bg-change {
-                    background-image: url('image/1st product.png') !important;
-                }
-            }
-        </style>
+        
 
 
         <!-- Content Wrapper -->
@@ -244,7 +232,7 @@
                     <button id="dropdownBtn"
                         class="text-white text-xl w-full block font-bold py-1 rounded-md flex justify-between items-center">
                         Categories
-                        <span id="arrow" class="ml-2">▼</span>
+                      
                     </button>
 
                     <ul id="dropdownMenu"
@@ -278,11 +266,11 @@
                     if (dropdownMenu.classList.contains("max-h-0")) {
                         dropdownMenu.classList.remove("max-h-0");
                         dropdownMenu.classList.add("max-h-96"); // Adjust max height as needed
-                        arrow.textContent = "▲";
+                        arrow.textContent = "";
                     } else {
                         dropdownMenu.classList.add("max-h-0");
                         dropdownMenu.classList.remove("max-h-96");
-                        arrow.textContent = "▼";
+                        arrow.textContent = "";
                     }
                 });
             </script>
