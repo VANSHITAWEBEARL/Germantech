@@ -46,6 +46,41 @@
         }
     </style>
 </head>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("HRQSdtosIDN2X9kDv"); // 👈 અહીં તારો Public Key મૂકો
+  })();
+</script>
+
+<script>
+  // Contact form submission
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form"); // તારા form નો selector
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Send email via EmailJS
+      emailjs.sendForm(
+        "service_p6mk3dq",   // 👈 EmailJS Service ID
+        "template_04sigjp",  // 👈 Template ID
+        form
+      ).then(
+        function() {
+          alert("✅ Your message has been sent successfully!");
+          form.reset();
+        },
+        function(error) {
+          alert("❌ Failed to send message. Try again later.");
+          console.error("EmailJS error:", error);
+        }
+      );
+    });
+  });
+</script>
+
 <body class="bg-[#043357] min-h-screen">
   <!-- Top Contact Bar -->
   <header>
@@ -176,28 +211,37 @@
 
    
   <!-- Contact Card -->
-  <div class="flex justify-center items-start w-full" style="background:#043357;">
-    <div class="flex flex-col my-24  md:flex-row overflow-hidden shadow-lg h-[910px] md:h-[659px]"
-      style="width: 1180px; border-top-left-radius:100px; border-bottom-right-radius:100px; background:#043357;">
+  <div class="flex justify-center items-start w-full bg-[#043357]">
+    <div class="flex flex-col my-24  md:flex-row overflow-hidden shadow-lg h-[910px] contectcard md:h-[659px]"
+      >
       <div class="md:w-1/2 w-full h-full">
-        <img src="image\contectpage.jpg" alt="House" class="object-cover w-full h-full min-h-[400px]" style="height:100%">
+        <img src="image\contectpage.jpg" alt="House" class="object-cover w-full h-full min-h-[400px] h-100%" >
       </div>
-      <div class="md:w-1/2 w-full flex flex-col justify-center p-10" style="background-color:#5B7E97; box-shadow:4px 4px 4px 0px #00000040;">
+      <div class="md:w-1/2 w-full flex flex-col justify-center p-10 contectcontain">
         <h2 class="text-3xl font-bold text-white mb-8">Contact us</h2>
-        <form class="space-y-6">
-          <input type="text" placeholder="Name" class="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700" />
-          <input type="email" placeholder="Email address" class="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700" />
-          <textarea placeholder="Message" rows="4" class="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700"></textarea>
-          <button type="submit" class="w-full text-white font-bold py-3 rounded-lg transition" style="background:#00233E;">SEND NOW</button>
-        </form>
+       <form class="space-y-6">
+  <input type="text" name="user_name" placeholder="Name" 
+         class="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700" required />
+  
+  <input type="email" name="user_email" placeholder="Email address" 
+         class="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700" required />
+  
+  <textarea name="message" placeholder="Message" rows="4" 
+            class="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-700 text-gray-700" required></textarea>
+  
+  <button type="submit" 
+          class="w-full text-white font-bold py-3 rounded-lg transition bg-[#00233E]">
+    SEND NOW
+  </button>
+</form>
       </div>
     </div>
   </div>
-<div class="w-full overflow-hidden rounded-none px-2 sm:px-4 pb-8">
-  <div class="w-full" style="aspect-ratio: 16/5;">
+<div class="w-full overflow-hidden rounded-none ">
+  <div class="w-full .contectiframe" >
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1377.6247534259242!2d75.8575!3d30.9005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a7b7e0e5e5e5e%3A0x123456789abcdef!2sTajpur%20road%20back%20side%20Barth%20box%20factory%20near%20Hp%20Gass%20Agency%20Ludhiana%20punjab!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
-      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      width="100%" height="300" class=border-0 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
 </div>

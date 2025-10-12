@@ -177,6 +177,16 @@
             }
         }
 
-     /* footer */
+.AllumumwindowandDoor{background: #00335B; border-top-right-radius:110px; border-bottom-left-radius:110px}
+.AllumumwindowandDoorright{font-weight:400; font-size:28px; line-height:1; letter-spacing:0; vertical-align:middle; width:441px; height:102px; opacity:1;}
+
+/* contect us */
+.contectcard{width: 1180px; border-top-left-radius:100px; border-bottom-right-radius:100px; background:#043357;}
+.contectcontain{background-color:#5B7E97; box-shadow:4px 4px 4px 0px #00000040;}
+    .contectiframe{aspect-ratio: 16/5} 
+    
+    
+    
+    /* footer */
      .footer{background: linear-gradient(180deg, #42AEC1 0%, #236A80 18.15%, #01355C 100%);}
      
